@@ -1,0 +1,99 @@
+mixin header(insideUs, mainUrl, UrlPrefix, noBanners)
+  - var noBanners = (noBanners == undefined) ? false : noBanners
+   
+  if(insideUs)
+    style.
+      #btn_e-commerce-tienda-en-linea, #e-commerce-tienda-en-linea, #btn_redes-sociales, #redes-sociales, #btn_alianzas-comerciales, #alianzas-comerciales, #quienes-ecommerce, .btnitemblue-wallet, .hide-us {display: none !important; }
+      .servicio-item{ width: 25%; flex-basis:25%; }
+  if(noBanners)
+    style.
+      #initheader{ display: none; }
+      nav.navbar.fixed-top{
+        display: block;
+        transform: translateY(0);
+      }
+  header#initheader
+    #topheader
+      nav.navbar.navbar-expand-xl
+        +navi(insideUs, mainUrl, 'blue-w.svg', 'topNav', UrlPrefix)
+    .homeSlider
+      div(style="background-image: url(app/img/bgs/bluepureloyalty.jpg); background-position:top left;"): .container: .row
+        .col-12
+          img(src="app/img/blue.svg" style="height:90px;").img-fluid.mx-auto
+      
+      mixin slide(theid, bg, logo, title, subtitle)
+        div(style="background-image: url(app/img/bgs/"+bg+")" id="slide_"+theid).mainsliderslide: .container: .row
+          .col-12.col-sm-5.offset-sm-1.image
+            img(src="app/img/logos/"+logo).mainsliderslide-logo.img-fluid
+          .col-12.col-sm-6.text
+            if title
+              .titulo
+                span(data-l=title[1]) !{title[0]}
+            if subtitle
+              .subtitulo(data-l=subtitle[1]) !{subtitle[0]}
+            if block
+              block
+     
+      +slide('be', 'b.png', 'b.svg', ['PROGRAMAS DE LEALTAD', 'LOYALTY PROGRAMS'], ['QUE GENERAN NEGOCIO®', 'THAT GENERATE BUSINESS'])
+
+      +slide('diablos', 'diablos.jpg', 'diablos.svg', ['PLAYBALL!', 'PLAYBALL!'], ['EL PROGRAMA DE LEALTAD DE LOS DIABLOS ROJOS DEL MÉXICO', 'THE LOYALTY PROGRAM OF DIABLOS ROJOS DEL MEXICO'])
+      
+      +slide('samsung', 'samsung.jpg', 'samsung.svg')
+        .titulo
+          span(data-l="THE LOYALTY PROGRAM OF") !PROGRAMA DE LEALTAD DE
+          img(src="app/img/logos/samsung-store.svg" style="max-width:240px")
+        .subtitulo(data-l="WITH MULTIPLE BENEFITS!") CON MÚLTIPLES BENEFICIOS!
+      
+      +slide('puntosmasxmas', 'puntosmasxmas.jpg', 'puntosmasxmas.svg')
+        .titulo
+          span(data-l="THE PROGRAM OF") !EL PROGRAMA DE
+          img(src="app/img/logos/grainger.svg" style="max-width:240px")
+        .subtitulo(data-l="THAT REWARDS YOUR PURCHASES") QUE RECOMPENSA TUS COMPRAS!
+      
+      +slide('castrol', 'castrol.jpg', 'castrol.svg', ['DISFRUTA DE', 'ENJOY'], ['LOS BENEFICIOS', 'THE BENEFITS'])
+      +slide('costabaja', 'costabaja.jpg', 'costabaja.svg', ['DESCUBRE COSTABAJA', 'DISCOVER COSTABAJA'], ['La puerta de entrada al Mar de Cortés', 'The entrance door to the Sea of Cortez'])
+      +slide('melia', 'melia.jpg', 'melia.svg', ['¡Canjea tus puntos', 'Redeem your points'], ['por increíbles premios!', 'for incredible prizes!'])
+      if(!insideUs)
+        +slide('recompensas', 'recompensas.jpg', 'recompensas.svg', ['Porque eres lo más importante para nosotros', 'Because you are the most important person for us'], ['RECOMPENSAMOS TU LEALTAD', 'WE REWARD YOUR LOYALTY'])
+        +slide('cielito', 'cielito.jpg', 'cielito.svg')
+          img(src="app/img/logos/cielito-es.svg" data-l-src="app/img/logos/cielito-en.svg", alt="Porque los mexicanos somos cielito de corazón")
+        +slide('cinepolis', 'cinepolis.jpg', 'cinepolis_store.svg')
+          .titulo
+            span(data-l="Online store, trivia, auctions") Tienda en línea, trivias, subastas
+          .subtitulo(data-l="and much more!") ¡y mucho más!
+          img(src="app/img/logos/club_cinepolis.svg" style="max-width:240px")
+        +slide('fleetguard', 'fleetguard.jpg', 'fleetguard.svg')
+          .titulo
+            span(data-l="BENEFITS AND DISCOUNTS <small>in various establishments</small>") BENEFICIOS Y DESCUENTOS <small>en diferentes establecimientos</small>
+          .subtitulo(data-l="ACCRUE POINTS to redeem for incredible prizes") ACUMULACIÓN DE PUNTOS <small>canjeables por increíbles premios</small>
+          img(src="app/img/logos/fleet-can.png" style="max-width:200px")
+        +slide('georgieboy', 'georgieboy.jpg', 'georgieboy.svg', ['Beneficios exclusivos', 'Unique benefits'], ['para socios GEORGIE BOY CLUB', 'exclusively to GEORGIE BOY CLUB members'])
+        +slide('puntosimpulsora', 'puntosimpulsora.jpg', 'puntosimpulsora.svg', ['¡Premiamos tu lealtad', 'We reward your Loyalty'], ['con grandes beneficios!', 'with unique benefits!'])
+        +slide('clublumen', 'clublumen.jpg', 'clublumen.svg', ['La tarjeta para comenzar', 'The card needed'], ['a crear', 'to begin ceating'])
+          img(src="app/img/logos/clublumen-card.png" style="max-width:240px")
+        +slide('redm', 'redm.jpg', 'redm.svg', ['El mejor Programa de Beneficios ', 'The best Benefit Program '], ['que reúne a la Comunidad de Carpinteros de Latinoamérica', 'that brings together the leading Carpenters in Latin America'])
+        +slide('pagina1', 'pagina1.jpg', 'pagina1.svg', ['Ahora te damos más razones para leer', 'Need more reasons to read?'], ['Más: Puntos, Puntos PREMIER, Beneficios', 'Accrue more points, Accrue Club Premier Points, Receive more benefits'])
+
+      +slide('loyalty', 'loyalty.jpg', 'loyalty.svg')
+        .titulo
+          span(data-l="LOYALTY") LEALTAD
+        .subtitulo(data-l="A wide variety of consulting services and technological solutions needed to deliver successful loyalty and incentive program.") Todos los servicios que se necesitan para tener un programa de lealtad y programa de incentivos exitoso.
+
+      +slide('modular', 'modular.jpg', 'modular.svg')
+        .titulo
+          span(data-l="MODULAR SERVICES") SERVICIOS MODULARES
+        .subtitulo(data-l="The services provided are flexible and modularly configured so they can adapt to the needs of each program.") Nuestros servicios son modulares y flexibles, se pueden contratar de manera integral o individual de acuerdo a las necesidades del programa.
+      +slide('crm', 'crm.jpg', 'crm.svg')
+        .titulo
+          span(data-l="CRM & BUSINESS INTELLIGENCE") CRM Y BUSINESS INTELLIGENCE
+        .subtitulo(data-l="We group and cluster the members of the programs to positively influence their personal behavior through promotional campaigns.") Agrupamos y segmentamos a los clientes afiliados a los programas para influir positivamente en su comportamiento.
+      +slide('flexible', 'flexible.jpg', 'tech.svg')
+        .titulo
+          span(data-l="FLEXIBLE AND ROBUST TECHNOLOGY") TECNOLOGÍA FLEXIBLE Y ROBUSTA
+        .subtitulo(data-l="Our programs are implemented throughout proprietary technology and applications developed on flexible and robust platforms.") Nuestros programas son respaldados con tecnología y aplicaciones propietarias desarrolladas en plataformas flexibles y robustas.
+
+    
+    +pleca
+  nav.navbar.bg-light.navbar-expand-xl.fixed-top
+    +navi(insideUs, mainUrl, 'blue.svg', 'mainNav', UrlPrefix)
+    +pleca

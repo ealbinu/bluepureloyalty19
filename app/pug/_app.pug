@@ -1,0 +1,386 @@
+- var title = "Blue Pure Loyalty"
+- var description = "Programas de Lealtad que generan negocio"
+- var url = "bluepureloyalty.com"
+- var secciones = ['¿Quiénes somos?', 'Fortalezas', 'Servicios', 'Resultados', 'Blue Wallet', 'Clientes', 'Noticias', 'Contacto']
+- var seccionesEN = ['About Us', 'Strengths', 'Services', 'Results', 'Blue Wallet', 'Clients', 'News', 'Contact']
+
+
+- function slugify(text){ return text.toString().toLowerCase().replace('é','e').replace('ñ','n').replace('í','i').replace('ó', 'o').replace('á','a').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, ''); }
+
+mixin head
+  head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  title=title
+  meta(name="description" content=description)
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+  link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+  link(href="https://fonts.googleapis.com/css?family=Muli:400,700|Open+Sans+Condensed:700" rel="stylesheet")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+  
+  link(rel="stylesheet", href="app/app.css")
+
+  
+  link(rel="icon" type="image/x-icon" href="favicon.ico")
+  link(rel="icon" type="image/png" href="favicon.png")
+  if block
+    block
+
+
+mixin scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js")
+  script(src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+  script.
+    $(document).ready(function(){
+      
+      $('.homeSlider').slick({
+        autoplay: true,
+        autoplaySpeed: 4500
+      })
+      
+      $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
+        $('.navbar-collapse').removeClass('show');
+        $('.navbar-toggler').addClass('collapsed');
+        scroller($(this.hash));
+        
+      });
+
+      /* LANGUAGE */
+      //StoredLang
+      if( Cookies.get('bluelang') == undefined ){
+        Cookies.set('bluelang', 'es');
+        changeLang();
+      } else if(Cookies.get('bluelang') == 'en'){
+        changeLang();
+      } 
+      
+
+      if(Cookies.get('bluelang') == 'es'){
+        $('.lang-en').hide();
+        $('.lang-es').show();
+      } else if(Cookies.get('bluelang')=='en'){
+        $('.lang-en').show();
+        $('.lang-es').hide();
+      }
+
+      // Cookie Ok
+      
+      if(Cookies.get('cookiesOK') !== undefined){
+        $('.cookies').hide();
+      }
+      $('.btn-cookies').click(function(){
+        $('.cookies').hide();
+        Cookies.set('cookiesOK', 1);
+      });
+
+
+
+      //Click lang
+      $('.changeLang').click(function(e){
+        e.preventDefault();
+        $('.navbar-collapse').removeClass('show');
+        $('.navbar-toggler').addClass('collapsed');
+        if( Cookies.get('bluelang') == 'es' ){
+          Cookies.set('bluelang', 'en');
+        } else {
+          Cookies.set('bluelang', 'es');
+        }
+        changeLang();
+      });
+      /*END LANGUAGE */
+
+
+      $('#unete .btn-group .btn').click(function(){
+        
+        var val = $(this).children('input').attr('val');
+        $('#unete a').attr('href', 'mailto:info@bluepureloyalty.com?subject='+val);
+      });
+
+
+    });
+    $(document).scroll(function(){ showhidenav() });
+    function scroller(hash){
+        var target = hash;
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top-62
+          }, 1000);
+          return false;
+        }
+    }
+
+    function showhidenav(){
+      if($(window).scrollTop()>250){
+        $('nav.navbar').addClass('visible');
+      } else {
+        $('nav.navbar').removeClass('visible');
+      }
+    }
+
+
+    function changeLang(){
+      $('[data-l]').each(function(index){
+        var pLan = $(this).html();
+        var nLan = $(this).attr('data-l');
+        $(this).html(nLan);
+        $(this).attr('data-l', pLan);
+      });
+
+      $('[data-l-src]').each(function(index){
+        var pLan = $(this).attr('src');
+        var nLan = $(this).attr('data-l-src');
+        $(this).attr('src', nLan);
+        $(this).attr('data-l-src', pLan);
+      });
+
+      if(Cookies.get('bluelang')=='en'){
+        $('.lang-en').show();
+        $('.lang-es').hide();
+      } else {
+        $('.lang-en').hide();
+        $('.lang-es').show();
+      }
+
+      
+
+    }
+
+
+mixin inputText(lb, typevar, pholder)
+  - if (pholder==null)
+    - pholder = lb
+  .form-group.row
+    label.col-form-label.col-5.text-right !{lb}
+    input.form-control.col-7(type=typevar, placeholder=pholder)
+    
+mixin inputOptions(lb, ...items)
+  - var nmb = Math.floor(Math.random() * 100);
+  .form-group.row
+    label.col-form-label.col-5.text-right
+      div !{lb}
+      
+    .col-7
+      each item in items
+        .form-check.form-check-inline: label
+          input.form-check-input(type="radio" name="eval"+nmb)
+          span=item
+
+mixin inputCheckboxes(lb, ...items)
+  - var nmb = Math.floor(Math.random() * 100);
+  .form-group.row
+    label.col-form-label.col-5.text-right
+      div !{lb}
+      
+    .col-7
+      each item in items
+        .form-check.form-check-inline: label
+          input.form-check-input(type="checkbox" name="eval"+item)
+          span=item
+
+mixin inputSelect(lb, ...items)
+  - var nmb = Math.floor(Math.random() * 100);
+  .form-group.row
+    label.col-form-label.col-5.text-right
+      div !{lb}
+    select.form-control.col-7
+      each item in items
+        option=item
+
+mixin catalogo(txt, img)
+  .card
+    img(src=img).card-img-top
+    .card-body
+      h4.card-title=txt
+      .card-text: p Consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+      .text-right: a(href="#").btn.btn-secondary Canjear
+
+mixin navi(inside, url, logo, navID, UrlPrefix)
+  - url = url==undefined ? "" : url
+  .container-fluid
+    a.navbar-brand(href="#initheader").smooth-scroll: img(src="app/img/"+logo).img-fluid.ml-2
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#"+navID)
+      span.fa.fa-bars
+    .collapse.navbar-collapse.justify-content-end(id=navID)
+      ul.navbar-nav
+        each sec, index in secciones
+          li.nav-item(class="btnitem"+slugify(sec)): a(href=url+"#"+slugify(sec) data-l=seccionesEN[index]).nav-link.smooth-scroll=sec
+        //li.separator
+        li.nav-item.country
+          ul
+            li: a(href=url+"#" data-l="ENGLISH").changeLang ESPAÑOL
+            li: a(href=url+"#" data-l="ESPAÑOL").changeLang ENGLISH
+        if inside
+          li.nav-item.country
+            ul
+              li: a(href=UrlPrefix+"_us.html") USA
+              li: a(href=UrlPrefix+".html") MEXICO  
+        else
+          li.nav-item.country
+            ul
+              li: a(href=UrlPrefix+".html") MÉXICO
+              li: a(href=UrlPrefix+"_us.html") USA    
+              
+                
+
+
+
+
+mixin navitems(inside, url, url)
+  - url = url==undefined ? "" : url
+  ul
+    each sec, index in secciones
+      li.nav-item(class="btnitem"+slugify(sec)): a(href=url+"#"+slugify(sec) data-l=seccionesEN[index]).smooth-scroll=sec
+    li.separator
+    li.nav-item.country
+      ul
+        li: a(href=url+"#" data-l="ENGLISH").changeLang ESPAÑOL
+        li: a(href=url+"#" data-l="ESPAÑOL").changeLang ENGLISH
+    if inside
+      li.nav-item.country
+        ul
+          li: a(href="index.html" data-l="MEXICO") MÉXICO
+          li: a(href="us.html") USA
+    else
+      li.nav-item.country
+        ul
+          li: a(href="index.html" data-l="MEXICO") MÉXICO
+          li: a(href="us.html") USA
+  
+
+
+mixin pleca
+  .pleca
+      span
+      span
+      span
+      span
+      span
+      span
+
+mixin footer(inside)
+  include modulos/_legales
+
+  .cookies
+    p(data-l="This website uses cookies to improve your experience. Continue to use the site as normal if you agree to the use of cookies. If you’d like to find out more about the cookies we use or to opt-out, please see our Privacy Policy.") Este sitio web utiliza cookies para mejorar tu experiencia. Si continúas navegando en el sitio, significa que aceptas el uso de las cookies. Si deseas más información sobre las cookies que empleamos y cómo manejarlas visita nuestra Política de Privacidad.
+    p
+      a(href="#" data-toggle="modal" data-target="#aviso" data-l="More information").btn.btn-dark.btn-sm Más información
+      button.btn.btn-light.btn-cookies(data-l="Continue") Continuar
+  
+  +modal('unete', '<span data-l="Join the Blue Team">Únete al Blue Team</span>')
+    h4(data-l="Select and area") Selecciona un área
+    .btn-group.btn-group-toggle(data-toggle="buttons")
+      label.btn.btn-primary.active
+        input(type="radio" name="unete" checked val="Marketing")
+        span(data-l="Marketing") Mercadotecnia
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Tecnología")
+        span(data-l="Technology") Tecnología
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Contact Center")
+        span Contact Center
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Diseño y Comunicación")
+        span(data-l="Design and Communication") Diseño y Comunicación
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="CRM and Business Intelligence")
+        span CRM & Business Intelligence
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Compras")
+        span(data-l="Procurement") Compras
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Fullfilment")
+        span(data-l="Fullfilment") Fullfilment
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Alianzas")
+        span(data-l="Business Alliances") Alianzas comerciales
+      label.btn.btn-primary
+        input(type="radio" name="unete" val="Otros")
+        span(data-l="Other") Otros
+    .text-center.mt-3.mb-3
+      a(href="mailto:info@bluepureloyalty.com?subject=Mercadotecnia" data-l="Send your CV").btn.btn-secondary.joinbtn Enviar tu CV
+
+
+  
+  footer
+    .container
+      .text-center: a(href="http://www.bluepureloyalty.com/" target="_blank"): img(src="app/img/powered.png")
+      .row.mt-4
+        .col.d-none.d-md-block
+          if inside
+            a(href="tel:5521673200") +(55) 2167 3200
+          else
+            a(href="tel:18442170744") +1 844 217 0744
+
+        .col-12.col-md.text-center
+          .row.socials
+          
+            a(href="https://www.facebook.com/Blue-Pure-Loyalty-155921304583101/" target="_blank").col.fa.fa-facebook.hide-us
+            a(href="https://www.facebook.com/Blue-Pure-Loyalty-US-253954128830079/" target="_blank").col.fa.fa-facebook.hide-mx
+
+            a(href="https://www.linkedin.com/company/blue-pure-loyalty/" target="_blank").col.fa.fa-linkedin
+            
+            a(href="https://twitter.com/blueloyalty_mx" target="_blank").col.fa.fa-twitter.hide-us
+            a(href="https://twitter.com/blueloyalty_us" target="_blank").col.fa.fa-twitter.hide-mx
+
+            a(href="https://www.instagram.com/bluepureloyalty_mx/" target="_blank").col.fa.fa-instagram.hide-us
+            a(href="https://www.instagram.com/blueloyalty_us/" target="_blank").col.fa.fa-instagram.hide-mx
+
+        .col.d-none.d-md-block.text-right: a(href="mailto:info@bluepureloyalty.com") info@bluepureloyalty.com
+
+        .col.d-block.d-md-none.text-center.mt-4
+          a(href="tel:5521673200") +(55) 2167 3200
+          br
+          a(href="mailto:info@bluepureloyalty.com") info@bluepureloyalty.com
+
+
+
+    .bluemx.mt-3
+      .text-center
+        a(href="http://www.bluepureloyalty.com/" target="_blank")
+          img(src="app/img/bluemx.png")
+    
+    .container
+      .row.copys
+        .col-sm-5.col-12 © Copyright 2019. Operadora ROFERI S.A. de C.V. #[span(data-l="All rights reserved.") Todos los Derechos Reservados.]
+        .col-sm-2.col-12.text-center
+           a(href="#" data-toggle="modal" data-target="#unete" data-l="Join the Blue Team") Únete al Blue Team
+        .col-sm-5.col-12.text-right
+          a(href="#" data-toggle="modal" data-target="#aviso" data-l="Privacy Policy") Aviso de Privacidad
+
+
+
+
+
+mixin modal(theid, titulo)
+  .modal.fade(role="dialog" id=theid)
+    .modal-dialog.modal-lg(role="document")
+      .modal-content
+        .modal-header
+          h2 !{titulo}
+          button(type="button" data-dismiss="modal").close: span &times;
+        .modal-body
+          if block
+            block
+
+
+
+
+
+
+
+mixin mainNew
+  .row.justify-content-center.vertical-align.mt-2
+    .col-md-6: img(src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Noticias").d-none.d-md-block.w-100
+    .col-md-6.text-center
+      h4.mt-3(data-l="Diablos Rojos of Mexico will launch the club´s Loyalty Program “Club Diablos” y “Club Diablos Kids”.") Diablos Rojos del México lanzará el Programa de Lealtad “Club Diablos” y “Club Diablos Kids”
+      img(src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Experiencia").d-block.d-md-none.w-100
+      p.small(data-l="Mexico City, February 28, 2019.") Ciudad de México, 25 de febrero de 2019.
+      p: strong Let’s play ball
+      p(data-l="Diablos Rojos of Mexico have thrown the first pitch at the most ambitious and successful project in sports of Mexico. Uniting their talent with the leading company in Loyalty Programs, Blue Pure Loyalty, together create the first Loyalty Program for baseball fans “Club Diablos” & “Club Diablos Kids” thought out to reward their fans loyalty for their love of their team.") Diablos Rojos del México es el primero en lanzar la pelota al proyecto más ambicioso y exitoso del deporte en México. Uniendo su talento junto con la empresa líder en Programas de Lealtad, Blue Pure Loyalty, crean el primer programa pensado en la afición beisbolera “Club Diablos” y “Club Diablos Kids” pensando en recompensar y premiar la lealtad de su afición por el amor a su equipo.
+      p.hide-us: a(href="noticias_articulo.html" data-l="Read more") Seguir leyendo
+      p.hide-mx: a(href="noticias_articulo_us.html" data-l="Read more") Seguir leyendo

@@ -1,0 +1,26 @@
+include _app
+doctype html
+html(lang="es")
+  +head
+    style.
+      .hide-mx {display: none !important; }
+
+body(data-spy="scroll" data-target=".navbar" data-offset="80")
+  include modulos/_header
+  +header(false, 'index.html', 'index')
+  include modulos/_quienes-somos
+  include modulos/_fortalezas
+  include modulos/_servicios
+  include modulos/_resultados
+  include modulos/_bluewallet
+  include modulos/_clientes
+  include modulos/_noticias
+  include modulos/_contacto
+  include modulos/_newsletter
+  
+  
+
+  +footer(true)
+  +scripts
+
+    

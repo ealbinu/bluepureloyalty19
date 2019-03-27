@@ -1,0 +1,24 @@
+include _app
+
+doctype html
+html(lang="es")
+  +head
+
+body(data-spy="scroll" data-target=".navbar" data-offset="80")
+  include modulos/_header
+  +header(true, 'index_us.html', 'index')
+
+  include modulos/_quienes-somos
+  include modulos/_fortalezas
+  include modulos/_servicios
+  include modulos/_resultados
+  //include modulos/_bluewallet
+  include modulos/_clientes
+  include modulos/_noticias
+  include modulos/_contactoUS
+  include modulos/_newsletter
+  
+
+  +footer(false)
+  +scripts
+

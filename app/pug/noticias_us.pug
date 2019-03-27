@@ -1,0 +1,24 @@
+include _app
+
+doctype html
+html(lang="es")
+  +head
+
+body(data-spy="scroll" data-target=".navbar" data-offset="80")
+
+  include modulos/_header
+  +header(true, 'index_us.html', 'noticias', true)
+  
+  section
+    .container
+      .row.justify-content-center
+        .col.text-center
+          h2(data-l="News") Noticias
+      
+    +mainNew
+    
+
+  +footer(false)
+  +scripts
+
+    

@@ -1,0 +1,26 @@
+mixin banner($lang)
+  section#banner
+    .carousel.slide(data-ride="carousel")#bannerSlide
+      .carousel-inner
+        //.carousel-item.active
+          img(src="app/img/sliders/slide_blue.jpg").d-block.w-100
+        
+        - var slds = ['blue', 'b', 'castrol', 'cielito', 'cinepolis', 'fleet', 'gboy', 'impulsora', 'lumen', 'redm', 'samsung']
+          each sl,indx in slds
+            - var activ = ""
+            - var $lang2
+            if(indx === 0)
+              - activ = 'active'
+            if($lang == 'es')
+              - $lang2 = 'en'
+            else
+              -$lang2 = 'es'
+            div(class="carousel-item "+activ)
+              img(src="app/img/banners/"+sl+"_d-"+$lang+".jpg" data-l-src="app/img/banners/"+sl+"_d-"+$lang2+".jpg").d-none.d-sm-block.w-100
+              img(src="app/img/banners/"+sl+"_m-"+$lang+".jpg" data-l-src="app/img/banners/"+sl+"_d-"+$lang2+".jpg").d-block.d-sm-none.w-100
+      
+      a.carousel-control-prev(data-slide="prev" href="#bannerSlide")
+        span.carousel-control-prev-icon
+        span.sr-only Previous
+      a.carousel-control-next(data-slide="next" href="#bannerSlide")
+        span.carousel-control-next-icon
