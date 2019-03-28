@@ -987,7 +987,7 @@ header li.separator {
 
 
   footer{
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
 
@@ -1142,7 +1142,7 @@ header li.separator {
 #noticias{
   background: #eee;
   padding-bottom: 180px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 #resultados p{
   color:#fff;
