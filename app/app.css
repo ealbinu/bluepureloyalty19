@@ -688,12 +688,12 @@ footer .socials a:hover{
 }
 
 .clientelogo{
-  max-width: 160px;
+  max-width: 140px;
   max-height: 80px;
 }
 
 #clientes img{
-  margin: 12px 30px;
+  margin: 2px 30px;
 }
 @media (max-width:480px){
   #clientes{
