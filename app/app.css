@@ -469,8 +469,9 @@ input.form-control, select.form-control, textarea.form-control{
 
 
 #contacto{
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 10px;
+  padding-top:20px;
   padding-bottom: 10px;
 
 }
@@ -1140,7 +1141,8 @@ header li.separator {
 
 #noticias{
   background: #eee;
-  padding-bottom: 96px;
+  padding-bottom: 180px;
+  margin-bottom: 80px;
 }
 #resultados p{
   color:#fff;
