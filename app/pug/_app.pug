@@ -202,7 +202,7 @@ mixin catalogo(txt, img)
 mixin navi(inside, url, logo, navID, UrlPrefix)
   - url = url==undefined ? "" : url
   .container-fluid
-    a.navbar-brand(href="#initheader").smooth-scroll: img(src="app/img/"+logo).img-fluid.ml-2
+    a.navbar-brand(href=UrlPrefix+".html#initheader").smooth-scroll: img(src="app/img/"+logo).img-fluid.ml-2
     button.navbar-toggler(type="button" data-toggle="collapse" data-target="#"+navID)
       span.fa.fa-bars
     .collapse.navbar-collapse.justify-content-end(id=navID)
