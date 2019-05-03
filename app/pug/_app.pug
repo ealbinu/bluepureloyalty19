@@ -202,7 +202,8 @@ mixin catalogo(txt, img)
 mixin navi(inside, url, logo, navID, UrlPrefix)
   - url = url==undefined ? "" : url
   .container-fluid
-    a.navbar-brand(href=UrlPrefix+".html#initheader").smooth-scroll: img(src="app/img/"+logo).img-fluid.ml-2
+    a.navbar-brand(href="index.html#initheader").smooth-scroll.hide-us: img(src="app/img/"+logo).img-fluid.ml-2
+    a.navbar-brand(href="index_us.html#initheader").smooth-scroll.hide-mx: img(src="app/img/"+logo).img-fluid.ml-2
     button.navbar-toggler(type="button" data-toggle="collapse" data-target="#"+navID)
       span.fa.fa-bars
     .collapse.navbar-collapse.justify-content-end(id=navID)
@@ -292,17 +293,14 @@ mixin footer(inside)
       label.btn.btn-primary
         input(type="radio" name="unete" val="Compras")
         span(data-l="Procurement") Compras
-      label.btn.btn-primary
+      label.btn.btn-primary.hide-us
         input(type="radio" name="unete" val="Fullfilment")
         span(data-l="Fullfilment") Fullfilment
-      label.btn.btn-primary
-        input(type="radio" name="unete" val="Alianzas")
-        span(data-l="Business Alliances") Alianzas comerciales
       label.btn.btn-primary
         input(type="radio" name="unete" val="Otros")
         span(data-l="Other") Otros
     .text-center.mt-3.mb-3
-      a(href="mailto:info@bluepureloyalty.com?subject=Mercadotecnia" data-l="Send your CV").btn.btn-secondary.joinbtn Enviar tu CV
+      a(href="mailto:info@bluepureloyalty.com?subject=Mercadotecnia" data-l="Send your CV").btn.btn-secondary.joinbtn Envia tu CV
 
 
   
@@ -379,7 +377,7 @@ mixin mainNew
     .col-md-6.text-center
       h4.mt-3(data-l="Diablos Rojos of Mexico will launch the club´s Loyalty Program “Club Diablos” y “Club Diablos Kids”.") Diablos Rojos del México lanzará el Programa de Lealtad “Club Diablos” y “Club Diablos Kids”
       img(src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Experiencia").d-block.d-md-none.w-100
-      p.small(data-l="Mexico City, February 28, 2019.") Ciudad de México, 25 de febrero de 2019.
+      p.small(data-l="Mexico City, February 28, 2019.") Ciudad de México, 28 de febrero de 2019.
       p: strong Let’s play ball
       p(data-l="Diablos Rojos of Mexico have thrown the first pitch at the most ambitious and successful project in sports of Mexico. Uniting their talent with the leading company in Loyalty Programs, Blue Pure Loyalty, together create the first Loyalty Program for baseball fans “Club Diablos” & “Club Diablos Kids” thought out to reward their fans loyalty for their love of their team.") Diablos Rojos del México es el primero en lanzar la pelota al proyecto más ambicioso y exitoso del deporte en México. Uniendo su talento junto con la empresa líder en Programas de Lealtad, Blue Pure Loyalty, crean el primer programa pensado en la afición beisbolera “Club Diablos” y “Club Diablos Kids” pensando en recompensar y premiar la lealtad de su afición por el amor a su equipo.
       p.hide-us: a(href="noticias_articulo.html" data-l="Read more") Seguir leyendo
