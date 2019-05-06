@@ -93,7 +93,7 @@ nav.navbar.fixed-top{
 section{
   padding-top: 90px;
   padding-bottom: 80px;
-  margin-bottom: 200px;
+  margin-bottom: 260px;
 }
 
 h2{
@@ -469,7 +469,7 @@ input.form-control, select.form-control, textarea.form-control{
 
 
 #contacto{
-  margin-top: 10px;
+  margin-top: 120px;
   margin-bottom: 10px;
   padding-top:20px;
   padding-bottom: 10px;
@@ -1133,6 +1133,7 @@ header li.separator {
 
 #resultados{
   background: var(--colMain);
+  padding-bottom: 140px;
 }
 #resultados p{
   color:#fff;
@@ -1141,7 +1142,7 @@ header li.separator {
 
 #noticias{
   background: #eee;
-  padding-bottom: 180px;
+  padding-bottom: 220px;
   margin-bottom: 30px;
 }
 #resultados p{
