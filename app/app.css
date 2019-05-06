@@ -1020,6 +1020,9 @@ header li.separator {
   .homeSlider .slick-slide > div,
   .homeSlider .slick-slide > div > div {
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left !important;
   }
   .homeSlider .slick-list .container,
   .homeSlider .slick-track .container,
@@ -1138,12 +1141,17 @@ header li.separator {
 #resultados p{
   color:#fff;
 }
-
+#resultados img{
+  margin-top: 60px;
+}
 
 #noticias{
   background: #eee;
   padding-bottom: 220px;
   margin-bottom: 30px;
+}
+#noticias .mt-2{
+  margin-top: 80px !important;
 }
 #resultados p{
   color:#fff;
@@ -1213,4 +1221,12 @@ header li.separator {
 #slide_samsung .mainsliderslide-logo,
 #slide_melia .mainsliderslide-logo {
 	max-width: 400px;
+}
+
+
+
+
+#quienes-somos .mt-2{
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
 }
