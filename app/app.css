@@ -469,7 +469,7 @@ input.form-control, select.form-control, textarea.form-control{
 
 
 #contacto{
-  margin-top: 120px;
+  margin-top: 200px;
   margin-bottom: 10px;
   padding-top:20px;
   padding-bottom: 10px;
@@ -981,7 +981,7 @@ header li.separator {
  
 
   .resultsimg{
-    max-height: 420px;
+    max-height: 600px;
   }
 
 
