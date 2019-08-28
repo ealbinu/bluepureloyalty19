@@ -1,0 +1,38 @@
+[
+  {
+    "uri":   "blue-wallet",
+    "image":  "noticias/img/blue-wallet.jpg",
+    "es": {
+      "titulo":   "Blue Wallet, la App que te permite tener todas tus tarjetas de lealtad a la mano.",
+      "sub":      "",
+      "fecha":    "Ciudad de México, 20 de Agosto de 2019.",
+      "intro":    "Blue Pure Loyalty, como la empresa líder de lealtad de clientes, ofrece Blue Wallet®, la App que permite a los usuarios de los principales programas de lealtad en México tener todas sus tarjetas a la mano, facilitando su uso para la acumulación y pago con puntos al llevar todas las tarjetas virtuales de los Programa de Lealtad en el teléfono celular.",
+      "nota":     "<p>Algunas de las funcionalidades que presenta Blue Wallet® son: la consulta de saldo y los movimientos realizados, ubicar las tiendas más cercanas, recibir promociones especiales como promociones de acuerdo a la posición geográfica donde se encuentra el usuario, permitiendo ofrecer beneficios en el momento y el lugar preciso, potencializando el valor de los beneficios, así como de los resultados para las empresas de los programas de lealtad.</p><p>Con Blue Wallet®, Blue Pure Loyalty, reafirma su sello distintivo de innovación y como un referente dentro del giro en la lealtad de clientes.</p>"
+    },
+    "en": {
+      "titulo":   "Blue Wallet, the App that allows you to have all your loyalty cards at hand.",
+      "sub":      "",
+      "fecha":    "Mexico City, August 20, 2019.",
+      "intro":    "Blue Pure Loyalty, as the leading customer loyalty company, brings you Blue Wallet®, the App that allows users of the top rated loyalty programs in Mexico to have all their loyalty cards at hand, making it easier to use for accumulation and payment with points while having all the Loyalty Program´s virtual cards on your mobile device.",
+      "nota":     "<p>Some of the features that Blue Wallet® offers are: account balance and transactions made consults, store locator, reception of special promotions according to the user´s geolocation, allowing Blue Wallet® to offer benefits at the time and the precise location, enhancing the value of the benefits, as well as the results for loyalty program´s.</p><p>With Blue Wallet®, Blue Pure Loyalty, reaffirms its hallmark of innovation and as a benchmark within the customer loyalty business.</p>"
+    }
+  },
+  {
+    "uri":   "diablos-rojos-del-mexico",
+    "image":  "https://source.unsplash.com/yXdJ8QVZlIA/548x300",
+    "es": {
+      "titulo":   "Diablos Rojos del México lanzará el Programa de Lealtad “Club Diablos” y “Club Diablos Kids”",
+      "sub":      "Let’s play ball",
+      "fecha":    "Ciudad de México, 28 de febrero de 2019.",
+      "intro":    "Diablos Rojos del México es el primero en lanzar la pelota al proyecto más ambicioso y exitoso del deporte en México. Uniendo su talento junto con la empresa líder en Programas de Lealtad, Blue Pure Loyalty, crean el primer programa pensado en la afición beisbolera “Club Diablos” y “Club Diablos Kids” pensando en recompensar y premiar la lealtad de su afición por el amor a su equipo.",
+      "nota":     "<p>Augusto Fernández CEO de Blue Pure Loyalty comentó: “Formar equipo con Diablos Rojos del México es una experiencia única, porque pensamos en todos los seguidores que acuden a motivar a sus jugadores en cada encuentro y los beneficios que ofrece el programa los motivará aún más a sentirse orgullosos de formar parte de los Diablos Rojos“.</p><p>El deporte y la lealtad dejan todos sus esfuerzos en el diamante, porque con “Club Diablos” y “Club Diablos Kids” no hay empate porque todos ganamos.</p>"
+    },
+    "en": {
+      "titulo":   "Diablos Rojos of Mexico will launch the club´s Loyalty Program “Club Diablos” y “Club Diablos Kids”.",
+      "sub":      "Let’s play ball",
+      "fecha":    "Mexico City, February 28, 2019.",
+      "intro":    "Diablos Rojos of Mexico have thrown the first pitch at the most ambitious and successful project in sports of Mexico. Uniting their talent with the leading company in Loyalty Programs, Blue Pure Loyalty, together create the first Loyalty Program for baseball fans “Club Diablos” & “Club Diablos Kids” thought out to reward their fans loyalty for their love of their team.",
+      "nota":     "<p>Augusto Fernández CEO of Blue Pure Loyalty stated ¨ Teaming up with Diablos Rojos of Mexico is a unique experience because we thought of all the fans who come out to motivate their players in each match and the benefits offered by the program will motivate them even more to be part of Diablos Rojos of Mexico¨</p><p>The sport and Loyalty leave their entire efforts out on the ball field because with “Club Diablos” & “Club Diablos Kids” there is no tiebreaker as everyone wins.</p>"
+    }
+  }
+]

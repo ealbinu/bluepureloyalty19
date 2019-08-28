@@ -36,18 +36,93 @@ mixin scripts
   script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
   script.
     $(document).ready(function(){
-      
       $('.homeSlider').slick({
         autoplay: true,
         autoplaySpeed: 4500
       })
-      
       $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
         $('.navbar-collapse').removeClass('show');
         $('.navbar-toggler').addClass('collapsed');
         scroller($(this.hash));
         
       });
+
+      /* NEWS IN HOME */
+      if($('.latestNew').length > 0){
+        $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
+          $('[data-parse=image]').attr('src', data[0].image);
+          if(Cookies.get('bluelang') == 'en'){
+            $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
+            $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
+            $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
+          } else {
+            $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
+            $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
+            $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
+          }
+          var uriregular = $('[data-parse=uri]').attr('href')
+          $('[data-parse=uri]').attr('href', uriregular+'#'+data[0].uri)
+          //SECOND
+          if($('.secondNew').length>0){
+            $('.secondNew [data-parse=image]').attr('src', data[1].image);
+            if(Cookies.get('bluelang') == 'en'){
+              $('.secondNew [data-parse=titulo]').text(data[1].en.titulo).attr('data-l', data[0].es.titulo);
+              $('.secondNew [data-parse=fecha]').text(data[1].en.fecha).attr('data-l', data[0].es.fecha);
+              $('.secondNew [data-parse=intro]').text(data[1].en.intro).attr('data-l', data[0].es.intro);
+            } else {
+              $('.secondNew [data-parse=titulo]').text(data[1].es.titulo).attr('data-l', data[0].en.titulo);
+              $('.secondNew [data-parse=fecha]').text(data[1].es.fecha).attr('data-l', data[0].en.fecha);
+              $('.secondNew [data-parse=intro]').text(data[1].es.intro).attr('data-l', data[0].en.intro);
+            }
+            var uriregular = $('.secondNew [data-parse=uri]').attr('href')
+            $('.secondNew [data-parse=uri]').attr('href', uriregular+'#'+data[1].uri)
+          }
+
+        }})
+      }
+
+      if($('.fullNew').length > 0) {
+        if(window.location.hash){
+          var wichNew = window.location.hash
+          $('.usmx a').each(function(item){
+            var uriregular = $(this).attr('href');
+            $(this).attr('href', uriregular+wichNew);
+          });
+
+          $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
+            for(var dt in data){
+              console.log(wichNew + ' >>  '+ data[dt].uri)
+              if('#'+data[dt].uri == wichNew){
+                $('[data-parse=image]').attr('src', data[dt].image);
+                if(Cookies.get('bluelang') == 'en'){
+                  $('[data-parse=titulo]').text(data[dt].en.titulo).attr('data-l', data[dt].es.titulo);
+                  $('[data-parse=fecha]').text(data[dt].en.fecha).attr('data-l', data[dt].es.fecha);
+                  $('[data-parse=intro]').text(data[dt].en.intro).attr('data-l', data[dt].es.intro);
+                  $('[data-parse=nota]').html(data[dt].en.nota).attr('data-l', data[dt].es.nota);
+                } else {
+                  $('[data-parse=titulo]').text(data[dt].es.titulo).attr('data-l', data[dt].en.titulo);
+                  $('[data-parse=fecha]').text(data[dt].es.fecha).attr('data-l', data[dt].en.fecha);
+                  $('[data-parse=intro]').text(data[dt].es.intro).attr('data-l', data[dt].en.intro);
+                  $('[data-parse=nota]').html(data[dt].es.nota).attr('data-l', data[dt].en.nota);
+                }
+              }
+            }
+            /*
+            $('[data-parse=image]').attr('src', data[0].image);
+            if(Cookies.get('bluelang') == 'en'){
+              $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
+              $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
+              $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
+            } else {
+              $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
+              $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
+              $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
+            }*/
+          }});
+        }  else {
+          window.history.back()
+        }
+      }
 
       /* LANGUAGE */
       //StoredLang
@@ -145,9 +220,6 @@ mixin scripts
         $('.lang-en').hide();
         $('.lang-es').show();
       }
-
-      
-
     }
 
 
@@ -211,17 +283,17 @@ mixin navi(inside, url, logo, navID, UrlPrefix)
         each sec, index in secciones
           li.nav-item(class="btnitem"+slugify(sec)): a(href=url+"#"+slugify(sec) data-l=seccionesEN[index]).nav-link.smooth-scroll=sec
         //li.separator
-        li.nav-item.country
+        li.nav-item.country.langs
           ul
             li: a(href=url+"#" data-l="ENGLISH").changeLang ESPAÑOL
             li: a(href=url+"#" data-l="ESPAÑOL").changeLang ENGLISH
         if inside
-          li.nav-item.country
+          li.nav-item.country.usmx
             ul
               li: a(href=UrlPrefix+"_us.html") USA
               li: a(href=UrlPrefix+".html") MEXICO  
         else
-          li.nav-item.country
+          li.nav-item.country.usmx
             ul
               li: a(href=UrlPrefix+".html") MÉXICO
               li: a(href=UrlPrefix+"_us.html") USA    
@@ -273,7 +345,7 @@ mixin footer(inside)
       button.btn.btn-light.btn-cookies(data-l="Continue") Continuar
   
   +modal('unete', '<span data-l="Join the Blue Team">Únete al Blue Team</span>')
-    h4(data-l="Select and area") Selecciona un área
+    h4(data-l="Select an area") Selecciona un área
     .btn-group.btn-group-toggle(data-toggle="buttons")
       label.btn.btn-primary.active
         input(type="radio" name="unete" checked val="Marketing")
@@ -295,7 +367,7 @@ mixin footer(inside)
         span(data-l="Procurement") Compras
       label.btn.btn-primary
         input(type="radio" name="unete" val="Fulfillment")
-        span(data-l="Fullfilment") Fulfillment
+        span(data-l="Fulfillment") Fulfillment
       label.btn.btn-primary.hide-us
         input(type="radio" name="unete" val="Alianzas comerciales")
         span(data-l="Commercial Alliances") Alianzas comerciales
@@ -376,12 +448,11 @@ mixin modal(theid, titulo)
 
 mixin mainNew
   .row.justify-content-center.vertical-align.mt-2
-    .col-md-6: img(src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Noticias").d-none.d-md-block.w-100
+    .col-md-6: img(src="-" alt="Noticias" data-parse="image").d-none.d-md-block.w-100
     .col-md-6.text-center
-      h4.mt-3(data-l="Diablos Rojos of Mexico will launch the club´s Loyalty Program “Club Diablos” y “Club Diablos Kids”.") Diablos Rojos del México lanzará el Programa de Lealtad “Club Diablos” y “Club Diablos Kids”
-      img(src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Experiencia").d-block.d-md-none.w-100
-      p.small(data-l="Mexico City, February 28, 2019.") Ciudad de México, 28 de febrero de 2019.
-      p: strong Let’s play ball
-      p(data-l="Diablos Rojos of Mexico have thrown the first pitch at the most ambitious and successful project in sports of Mexico. Uniting their talent with the leading company in Loyalty Programs, Blue Pure Loyalty, together create the first Loyalty Program for baseball fans “Club Diablos” & “Club Diablos Kids” thought out to reward their fans loyalty for their love of their team.") Diablos Rojos del México es el primero en lanzar la pelota al proyecto más ambicioso y exitoso del deporte en México. Uniendo su talento junto con la empresa líder en Programas de Lealtad, Blue Pure Loyalty, crean el primer programa pensado en la afición beisbolera “Club Diablos” y “Club Diablos Kids” pensando en recompensar y premiar la lealtad de su afición por el amor a su equipo.
-      p.hide-us: a(href="noticias_articulo.html" data-l="Read more") Seguir leyendo
-      p.hide-mx: a(href="noticias_articulo_us.html" data-l="Read more") Seguir leyendo
+      h4.mt-3(data-l="-" data-parse="titulo") -
+      img(src="" alt="" data-parse="image").d-block.d-md-none.w-100
+      p.small(data-l="-" data-parse="fecha") -
+      p(data-parse="intro" data-l="-") -
+      p.hide-us: a(href="noticias_articulo.html" data-l="Read more" data-parse="uri") Seguir leyendo
+      p.hide-mx: a(href="noticias_articulo_us.html" data-l="Read more" data-parse="uri") Seguir leyendo

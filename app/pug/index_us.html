@@ -13,12 +13,12 @@
   <link rel="stylesheet" href="app/app.css"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" href="favicon.png"/>
-  <style>
-    .hide-mx {display: none !important; }
-    
-  </style>
 </html>
 <body data-spy="scroll" data-target=".navbar" data-offset="80">
+    <style>
+      #btn_e-commerce-tienda-en-linea, #e-commerce-tienda-en-linea, #btn_redes-sociales, #redes-sociales, #btn_alianzas-comerciales, #alianzas-comerciales, #quienes-ecommerce, .btnitemblue-wallet, .hide-us {display: none !important; }
+      .servicio-item{ width: 25%; flex-basis:25%; }
+    </style>
     <header id="initheader">
       <div id="topheader">
         <nav class="navbar navbar-expand-xl">
@@ -26,25 +26,25 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav"><span class="fa fa-bars"></span></button>
             <div class="collapse navbar-collapse justify-content-end" id="topNav">
               <ul class="navbar-nav">
-                <li class="nav-item btnitemquienes-somos"><a class="nav-link smooth-scroll" href="index.html#quienes-somos" data-l="About Us">¿Quiénes somos?</a></li>
-                <li class="nav-item btnitemfortalezas"><a class="nav-link smooth-scroll" href="index.html#fortalezas" data-l="Strengths">Fortalezas</a></li>
-                <li class="nav-item btnitemservicios"><a class="nav-link smooth-scroll" href="index.html#servicios" data-l="Services">Servicios</a></li>
-                <li class="nav-item btnitemresultados"><a class="nav-link smooth-scroll" href="index.html#resultados" data-l="Results">Resultados</a></li>
-                <li class="nav-item btnitemblue-wallet"><a class="nav-link smooth-scroll" href="index.html#blue-wallet" data-l="Blue Wallet">Blue Wallet</a></li>
-                <li class="nav-item btnitemclientes"><a class="nav-link smooth-scroll" href="index.html#clientes" data-l="Clients">Clientes</a></li>
-                <li class="nav-item btnitemnoticias"><a class="nav-link smooth-scroll" href="index.html#noticias" data-l="News">Noticias</a></li>
-                <li class="nav-item btnitemcontacto"><a class="nav-link smooth-scroll" href="index.html#contacto" data-l="Contact">Contacto</a></li>
+                <li class="nav-item btnitemquienes-somos"><a class="nav-link smooth-scroll" href="index_us.html#quienes-somos" data-l="About Us">¿Quiénes somos?</a></li>
+                <li class="nav-item btnitemfortalezas"><a class="nav-link smooth-scroll" href="index_us.html#fortalezas" data-l="Strengths">Fortalezas</a></li>
+                <li class="nav-item btnitemservicios"><a class="nav-link smooth-scroll" href="index_us.html#servicios" data-l="Services">Servicios</a></li>
+                <li class="nav-item btnitemresultados"><a class="nav-link smooth-scroll" href="index_us.html#resultados" data-l="Results">Resultados</a></li>
+                <li class="nav-item btnitemblue-wallet"><a class="nav-link smooth-scroll" href="index_us.html#blue-wallet" data-l="Blue Wallet">Blue Wallet</a></li>
+                <li class="nav-item btnitemclientes"><a class="nav-link smooth-scroll" href="index_us.html#clientes" data-l="Clients">Clientes</a></li>
+                <li class="nav-item btnitemnoticias"><a class="nav-link smooth-scroll" href="index_us.html#noticias" data-l="News">Noticias</a></li>
+                <li class="nav-item btnitemcontacto"><a class="nav-link smooth-scroll" href="index_us.html#contacto" data-l="Contact">Contacto</a></li>
                 <!--li.separator-->
-                <li class="nav-item country langs">
+                <li class="nav-item country">
                   <ul>
-                    <li><a class="changeLang" href="index.html#" data-l="ENGLISH">ESPAÑOL</a></li>
-                    <li><a class="changeLang" href="index.html#" data-l="ESPAÑOL">ENGLISH</a></li>
+                    <li><a class="changeLang" href="index_us.html#" data-l="ENGLISH">ESPAÑOL</a></li>
+                    <li><a class="changeLang" href="index_us.html#" data-l="ESPAÑOL">ENGLISH</a></li>
                   </ul>
                 </li>
-                <li class="nav-item country usmx">
+                <li class="nav-item country">
                   <ul>
-                    <li><a href="index.html">MÉXICO</a></li>
-                    <li><a href="index_us.html">USA    </a></li>
+                    <li><a href="index_us.html">USA</a></li>
+                    <li><a href="index.html">MEXICO  </a></li>
                   </ul>
                 </li>
               </ul>
@@ -137,103 +137,6 @@
                   </div>
                 </div>
               </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/recompensas.jpg)" id="slide_recompensas">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/recompensas.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="Because you are the most important person for us">Porque eres lo más importante para nosotros</span></div>
-                      <div class="subtitulo" data-l="WE REWARD YOUR LOYALTY">RECOMPENSAMOS TU LEALTAD</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/cielito.jpg)" id="slide_cielito">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/cielito.svg"></div>
-                    <div class="col-12 col-sm-6 text"><img src="app/img/logos/cielito-es.svg" data-l-src="app/img/logos/cielito-en.svg" alt="Porque los mexicanos somos cielito de corazón">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/cinepolis.jpg)" id="slide_cinepolis">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/cinepolis_store.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="Online store, trivia, auctions">Tienda en línea, trivias, subastas</span></div>
-                      <div class="subtitulo" data-l="and much more!">¡y mucho más!</div><img src="app/img/logos/club_cinepolis.svg" style="max-width:240px">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/fleetguard.jpg)" id="slide_fleetguard">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/fleetguard.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="BENEFITS AND DISCOUNTS &lt;small&gt;in various establishments&lt;/small&gt;">BENEFICIOS Y DESCUENTOS <small>en diferentes establecimientos</small></span></div>
-                      <div class="subtitulo" data-l="ACCRUE POINTS to redeem for incredible prizes">ACUMULACIÓN DE PUNTOS <small>canjeables por increíbles premios</small></div><img src="app/img/logos/fleet-can.png" style="max-width:200px">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/georgieboy.jpg)" id="slide_georgieboy">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/georgieboy.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="Unique benefits">Beneficios exclusivos</span></div>
-                      <div class="subtitulo" data-l="exclusively to GEORGIE BOY CLUB members">para socios GEORGIE BOY CLUB</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/puntosimpulsora.jpg)" id="slide_puntosimpulsora">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/puntosimpulsora.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="We reward your Loyalty">¡Premiamos tu lealtad</span></div>
-                      <div class="subtitulo" data-l="with unique benefits!">con grandes beneficios!</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/clublumen.jpg)" id="slide_clublumen">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/clublumen.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="The card needed">La tarjeta para comenzar</span></div>
-                      <div class="subtitulo" data-l="to begin creating">a crear</div><img src="app/img/logos/clublumen-card.png" style="max-width:240px">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/redm.jpg)" id="slide_redm">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/redm.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="The best Benefit Program ">El mejor Programa de Beneficios </span></div>
-                      <div class="subtitulo" data-l="that brings together the leading Carpenters in Latin America">que reúne a la Comunidad de Carpinteros de Latinoamérica</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mainsliderslide" style="background-image: url(app/img/bgs/pagina1.jpg)" id="slide_pagina1">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/pagina1.svg"></div>
-                    <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="Need more reasons to read?">Ahora te damos más razones para leer</span></div>
-                      <div class="subtitulo" data-l="Accrue more points, Accrue Club Premier Points, Receive more benefits">Más: Puntos, Puntos PREMIER, Beneficios</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="mainsliderslide" style="background-image: url(app/img/bgs/loyalty.jpg)" id="slide_loyalty">
                 <div class="container">
                   <div class="row">
@@ -286,25 +189,25 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"><span class="fa fa-bars"></span></button>
         <div class="collapse navbar-collapse justify-content-end" id="mainNav">
           <ul class="navbar-nav">
-            <li class="nav-item btnitemquienes-somos"><a class="nav-link smooth-scroll" href="index.html#quienes-somos" data-l="About Us">¿Quiénes somos?</a></li>
-            <li class="nav-item btnitemfortalezas"><a class="nav-link smooth-scroll" href="index.html#fortalezas" data-l="Strengths">Fortalezas</a></li>
-            <li class="nav-item btnitemservicios"><a class="nav-link smooth-scroll" href="index.html#servicios" data-l="Services">Servicios</a></li>
-            <li class="nav-item btnitemresultados"><a class="nav-link smooth-scroll" href="index.html#resultados" data-l="Results">Resultados</a></li>
-            <li class="nav-item btnitemblue-wallet"><a class="nav-link smooth-scroll" href="index.html#blue-wallet" data-l="Blue Wallet">Blue Wallet</a></li>
-            <li class="nav-item btnitemclientes"><a class="nav-link smooth-scroll" href="index.html#clientes" data-l="Clients">Clientes</a></li>
-            <li class="nav-item btnitemnoticias"><a class="nav-link smooth-scroll" href="index.html#noticias" data-l="News">Noticias</a></li>
-            <li class="nav-item btnitemcontacto"><a class="nav-link smooth-scroll" href="index.html#contacto" data-l="Contact">Contacto</a></li>
+            <li class="nav-item btnitemquienes-somos"><a class="nav-link smooth-scroll" href="index_us.html#quienes-somos" data-l="About Us">¿Quiénes somos?</a></li>
+            <li class="nav-item btnitemfortalezas"><a class="nav-link smooth-scroll" href="index_us.html#fortalezas" data-l="Strengths">Fortalezas</a></li>
+            <li class="nav-item btnitemservicios"><a class="nav-link smooth-scroll" href="index_us.html#servicios" data-l="Services">Servicios</a></li>
+            <li class="nav-item btnitemresultados"><a class="nav-link smooth-scroll" href="index_us.html#resultados" data-l="Results">Resultados</a></li>
+            <li class="nav-item btnitemblue-wallet"><a class="nav-link smooth-scroll" href="index_us.html#blue-wallet" data-l="Blue Wallet">Blue Wallet</a></li>
+            <li class="nav-item btnitemclientes"><a class="nav-link smooth-scroll" href="index_us.html#clientes" data-l="Clients">Clientes</a></li>
+            <li class="nav-item btnitemnoticias"><a class="nav-link smooth-scroll" href="index_us.html#noticias" data-l="News">Noticias</a></li>
+            <li class="nav-item btnitemcontacto"><a class="nav-link smooth-scroll" href="index_us.html#contacto" data-l="Contact">Contacto</a></li>
             <!--li.separator-->
-            <li class="nav-item country langs">
+            <li class="nav-item country">
               <ul>
-                <li><a class="changeLang" href="index.html#" data-l="ENGLISH">ESPAÑOL</a></li>
-                <li><a class="changeLang" href="index.html#" data-l="ESPAÑOL">ENGLISH</a></li>
+                <li><a class="changeLang" href="index_us.html#" data-l="ENGLISH">ESPAÑOL</a></li>
+                <li><a class="changeLang" href="index_us.html#" data-l="ESPAÑOL">ENGLISH</a></li>
               </ul>
             </li>
-            <li class="nav-item country usmx">
+            <li class="nav-item country">
               <ul>
-                <li><a href="index.html">MÉXICO</a></li>
-                <li><a href="index_us.html">USA    </a></li>
+                <li><a href="index_us.html">USA</a></li>
+                <li><a href="index.html">MEXICO  </a></li>
               </ul>
             </li>
           </ul>
@@ -321,7 +224,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8 col-xs text-center">
-          <p data-l="&lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt;  is the leading marketing and technological company in building loyalty to a Brand, its end customers, sales agents, sales channels, employees and products and services, influencing their behavior in a positive and effective way consistently increasing profitability margins, sales, satisfaction and loyalty through time."><strong>Blue Pure Loyalty ®</strong> es la empresa de Mercadotecnia y Tecnología líder en construir lealtad de los clientes finales, fuerza de ventas, canal de ventas y empleados hacia la marca, empresa, productos y servicios de nuestros clientes, influyendo en su comportamiento de manera positiva y efectiva logrando aumentar consistentemente la rentabilidad, las ventas, su satisfacción y su lealtad con el paso del tiempo.</p>
+          <p data-l="&lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt;  is the leading marketing and technological company in building loyalty to a Brand, its end customers, sales agents, employees and products and services, influencing their behavior in a positive and effective way consistently increasing profitability margins, sales, satisfaction and loyalty through time."><strong>Blue Pure Loyalty ®</strong> es la empresa de Mercadotecnia y Tecnología líder en construir lealtad de los clientes finales, fuerza de ventas, canal de ventas y empleados hacia la marca, empresa, productos y servicios de nuestros clientes, influyendo en su comportamiento de manera positiva y efectiva logrando aumentar consistentemente la rentabilidad, las ventas, su satisfacción y su lealtad con el paso del tiempo.</p>
         </div>
       </div>
     </div>
@@ -351,8 +254,8 @@
         <div class="col-md-8 text-center">
           <h4 class="mt-3" data-l="EXPERIENCE">EXPERIENCIA</h4><img class="d-block d-md-none w-100" src="app/img/fortalezas/experiencia.jpg" alt="Experiencia">
           <p data-l="Proven experience, strategic thinking and business creativity are our settling pillars. Our founder and CEO was a member of the founding team of Ticketmaster in Mexico. In 1996, he was the mastermind of Aeromexico’s Frequent Flyer Program, Club Premier and also a member of the founding team of SkyTeam in 2000. He was responsible for Club Premier´s growth up to 2005 when he decided to found &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt;.">Experiencia probada, pensamiento estratégico y creatividad de negocio. Nuestro Fundador y Director General fue miembro del equipo fundador de Ticketmaster México, creador de Club Premier de Aeroméxico en 1996 y miembro del equipo fundador de SkyTeam en el año 2000, fue responsable del crecimiento de Club Premier hasta 2005 que funda <strong>Blue Pure Loyalty®</strong>.</p>
-          <p class="hide-us" data-l="For over 14 years, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has set the lead in the development of Loyalty and Incentive Programs. Experts in the areas of Technology, Marketing, Business Intelligence, Design &amp; Communication, Social Media, among others, provide all the expertise in the aim of developing the best Loyalty and Incentive Programs of the industry. Therefore, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has had the privilege of working for renowned companies such as Gandhi, Lumen, Cielito Querido Café, Samsung, Waldo's, Grainger, Castrol, CostaBaja, Meliá Hotels, among others.">Durante 14 años <strong>Blue Pure Loyalty®</strong> ha sido la empresa líder en Programas de Lealtad y de Incentivos destacándose por su equipo de expertos en Tecnología, Marketing, Business Intelligence, Diseño y Comunicación, Redes Sociales, entre otros, brindando toda la experiencia necesaria para el desarrollo de los mejores Programas de Lealtad y de Incentivos. <strong>Blue Pure Loyalty®</strong> ha prestado sus servicios y asesorado a reconocidas empresas tales como librerías Gandhi, Lumen, Cielito Querido Café, Cinépolis, Samsung, Waldo´s, Grainger, Castrol, CostaBaja y Hoteles Meliá.</p>
-          <p class="hide-mx" data-l="For over 14 years, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has set the lead in the development of Loyalty and Incentive Programs. Experts in the areas of Technology, Marketing, Business Intelligence, Design &amp; Communication, among others provide all the expertise in the aim of developing the best Loyalty and Incentive Programs of the industry. Threrefore, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has had the privilege of working for renowned companies such as Samsung, Grainger, Castrol, CostaBaja, Meliá Hotels, among others.">Durante 14 años <strong>Blue Pure Loyalty®</strong> ha sido la empresa líder en Programas de Lealtad y de Incentivos destacándose por su equipo de expertos en Tecnología, Marketing, Business Intelligence, Diseño y Comunicación, entre otros, brindando toda la experiencia necesaria para el desarrollo de los mejores Programas de Lealtad y de Incentivos. <strong>Blue Pure Loyalty®</strong> ha prestado sus servicios y asesorado a reconocidas empresas tales como Samsung, Grainger, Castrol, CostaBaja, Hoteles Meliá, entre otros.</p>
+          <p class="hide-us" data-l="For over 14 years, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has set the lead in the development of Loyalty and Incentive Programs. Experts in the areas of Technology, Marketing, Business Intelligence, Design &amp; Communication, Social Media, among others, provide all the expertise in the aim of developing the best Loyalty and Incentive Programs of the industry. Therefore, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has had the privilege of working for renowned companies such as Samsung, Grainger, Castrol, CostaBaja, Meliá Hotels, among others.">Durante 14 años <strong>Blue Pure Loyalty®</strong> ha sido la empresa líder en Programas de Lealtad y de Incentivos destacándose por su equipo de expertos en Tecnología, Marketing, Business Intelligence, Diseño y Comunicación, Redes Sociales, entre otros, brindando toda la experiencia necesaria para el desarrollo de los mejores Programas de Lealtad y de Incentivos. <strong>Blue Pure Loyalty®</strong> ha prestado sus servicios y asesorado a reconocidas empresas tales como librerías Gandhi, Lumen, Cielito Querido Café, Cinépolis, Samsung, Waldo´s, Grainger, Castrol, CostaBaja y Hoteles Meliá.</p>
+          <p class="hide-mx" data-l="For over 14 years, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has set the lead in the development of Loyalty and Incentive Programs. Experts in the areas of Technology, Marketing, Business Intelligence, Design &amp; Communication, among others provide all the expertise in the aim of developing the best Loyalty and Incentive Programs of the industry. Threrefore, &lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; has had the privilege of working for renowned companies such as Samsung, Citibank, Grainger, Castrol, CostaBaja and Meliá Hotels.">Durante 14 años <strong>Blue Pure Loyalty®</strong> ha sido la empresa líder en Programas de Lealtad y de Incentivos destacándose por su equipo de expertos en Tecnología, Marketing, Business Intelligence, Diseño y Comunicación, entre otros, brindando toda la experiencia necesaria para el desarrollo de los mejores Programas de Lealtad y de Incentivos. <strong>Blue Pure Loyalty®</strong> ha prestado sus servicios y asesorado a reconocidas empresas tales como Samsung, Grainger, Castrol, CostaBaja, Hoteles Meliá, entre otros.</p>
         </div>
       </div>
       <div class="row justify-content-center vertical-align mt-5"> 
@@ -366,7 +269,7 @@
         <div class="col-md-4"><img class="d-none d-md-block w-100" src="app/img/fortalezas/innovacion.jpg" alt="Innovación"></div>
         <div class="col-md-8 text-center">
           <h4 class="mt-3" data-l="TECHNOLOGY &amp; INNOVATION">TECNOLOGÍA E INNOVACIÓN</h4><img class="d-block d-md-none w-100" src="app/img/fortalezas/innovacion.jpg" alt="Innovación">
-          <p data-l="Ground breaking, attractive and efficient Loyalty or Incentive Programs based on the customer’s business expertise implemented throughout &lt;strong&gt;Blue Pure Loyalty®'s&lt;/strong&gt; proprietary technology and applications developed on flexible and robust platforms such as &lt;strong&gt;Blue Engine®, Blue Link®, Blue Module®, Blue Panel®, Blue CRM &amp; Business Intelligence®&lt;/strong&gt;, to name a few.">Programas de Lealtad y de Incentivos innovadores, atractivos y eficientes basados en el conocimiento del cliente y respaldados con tecnología y aplicaciones propietarias desarrolladas en plataformas flexibles y robustas, contando con aplicativos tecnológicos como <strong>Blue Engine®, Blue Link®, Blue Module®, Blue Panel®, Blue CRM & Business Intelligence®</strong>, entre otros.</p>
+          <p data-l="Ground breaking, attractive and efficient Loyalty or Incentive Programs based on the customer’s business expertise implemented throughout &lt;strong&gt;Blue Pure Loyalty®'s&lt;/strong&gt; proprietary technology and applications developed on flexible and robust platforms such as &lt;strong&gt;Blue Engine®, Blue Link®, Blue Module®, Blue Panel®, Blue CRM &amp; Business Intelligence®&lt;/strong&gt;, among others.">Programas de Lealtad y de Incentivos innovadores, atractivos y eficientes basados en el conocimiento del cliente y respaldados con tecnología y aplicaciones propietarias desarrolladas en plataformas flexibles y robustas, contando con aplicativos tecnológicos como <strong>Blue Engine®, Blue Link®, Blue Module®, Blue Panel®, Blue CRM & Business Intelligence®</strong>, entre otros.</p>
         </div>
       </div>
       <div class="row justify-content-center vertical-align mt-5">
@@ -432,13 +335,13 @@
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="consultoria"><img class="img-circle" src="app/img/servicios/consultoria.png">
           <h4 class="mt-3" data-l="Consulting">Consultoría</h4>
-          <div class="text-left" data-l="&lt;p&gt;&lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; provides a complete range of consulting services that can be implemented on phased stages depending on the customer needs. These consulting services include strategic planning, program design, analysis and business process improvement, benefits, communication and affiliation platform analysis, ROI analysis, among others.&lt;/p&gt;"><p><strong>Blue Pure Loyalty®</strong> cuenta con una serie completa de servicios de consultoría que ofrece modularmente de acuerdo a las necesidades particulares de cada uno de nuestros clientes tales como planeación estratégica y diseño de programas, análisis de procesos de mejora, análisis de plataforma de beneficios, comunicación y afiliación, análisis de retorno de inversión, entre otros.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;&lt;strong&gt;Blue Pure Loyalty®&lt;/strong&gt; provides a complete range of consulting services that can be implemented on phased stages depending on the customer needs. These consulting services include Strategic Planning, Program Design, Analysis and Business Process Improvement, Profit Platform Analysis, Communication and Affiliation, ROI Analysis, among others.&lt;/p&gt;"><p><strong>Blue Pure Loyalty®</strong> cuenta con una serie completa de servicios de consultoría que ofrece modularmente de acuerdo a las necesidades particulares de cada uno de nuestros clientes tales como planeación estratégica y diseño de programas, análisis de procesos de mejora, análisis de plataforma de beneficios, comunicación y afiliación, análisis de retorno de inversión, entre otros.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="business-intelligence-crm"><img class="img-circle" src="app/img/servicios/business-intelligence-crm.png">
           <h4 class="mt-3" data-l="Business Intelligence &amp; CRM">Business Intelligence &amp; CRM</h4>
-          <div class="text-left" data-l="&lt;p&gt;Through statistical analysis and customer data valuation models, we group and analyze end customers segment, selected sales agents or targeted employees, according to their purchasing or selling patterns to positively influence their personal behavior through promotional campaigns that increase purchase transactions and desired relationship campaigns that can be translated into loyalty to the brand and company. &lt;/p&gt;"><p>A través de análisis estadísticos y modelos de valoración del cliente, agrupamos y analizamos a los clientes finales y vendedores de acuerdo a sus patrones de compra o venta para influir positivamente en su comportamiento mediante campañas promocionales que generan más transacciones y campañas de relacionamiento que aumentan la lealtad hacia la marca y empresa.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;Through statistical analysis and customer data valuation models, we group and analyze end customers segment, selected sales agents or targeted employees, according to their purchasing patterns to positively influence their personal behavior through promotional campaigns that increase purchase transactions and desired relationship campaigns that can be translated into loyalty to the brand and company. &lt;/p&gt;"><p>A través de análisis estadísticos y modelos de valoración del cliente, agrupamos y analizamos a los clientes finales y vendedores de acuerdo a sus patrones de compra o venta para influir positivamente en su comportamiento mediante campañas promocionales que generan más transacciones y campañas de relacionamiento que aumentan la lealtad hacia la marca y empresa.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
@@ -450,25 +353,25 @@
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="mercadotecnia-digital"><img class="img-circle" src="app/img/servicios/mercadotecnia-digital.png">
           <h4 class="mt-3" data-l="Digital Marketing">Mercadotecnia Digital</h4>
-          <div class="text-left" data-l="&lt;p&gt;From the definition to the implementation of digital marketing plans including from the early stages of strategy definition to the managemente and measurement stage of the marketing campaign results.&lt;/p&gt;&lt;p&gt;The plan may consider the usage of various types of services such as Paid Media, in platforms including Google Ads, Google Shopping, Facebook, Twitter, Instagram, Pinterest and LinkedIn. We also implement and manage ad Retargeting campaigns for products and services.&lt;/p&gt;"><p>Definición de la estretegia y del plan de mercadotecnia digital, así como la implementación y administración del mismo. El plan puede considerar varios tipos de servicios como campañas de anuncios pagados en Gogle Ads y Google Shopping y en plataformas como Facebook, Twitter, Instagram, Pinterest y LinkedIn. También implementamos y administramos campañas de Retargeting de productos y servicios.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;From the definition to the implementation of Digital Marketing Plans including from the early stages of Strategy Definition to the Management and Measurement stage of the marketing campaign results. &lt;/p&gt;&lt;p&gt;The Digital Marketing Plan is designed and built according to the specific needs of the Loyalty and/or Incentive Programs. The plan may consider the usage of various types of services like SEO, Paid Media, Inbound Marketing and  platforms like Google Ads, Google Analytics, Facebook, Twitter, Instagram, Pinterest and LinkedIn.&lt;/p&gt;"><p>Definición de la estretegia y del plan de mercadotecnia digital, así como la implementación y administración del mismo. El plan puede considerar varios tipos de servicios como campañas de anuncios pagados en Gogle Ads y Google Shopping y en plataformas como Facebook, Twitter, Instagram, Pinterest y LinkedIn. También implementamos y administramos campañas de Retargeting de productos y servicios.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="redes-sociales"><img class="img-circle" src="app/img/servicios/redes-sociales.png">
           <h4 class="mt-3" data-l="Social Media">Redes Sociales</h4>
-          <div class="text-left" data-l="&lt;p&gt;Management of the program social accounts in the main social networks such as Facebook, Twitter, Instagram, Pinterest and LinkedIn, according to the objectives and the selected target of the program.&lt;/p&gt;&lt;p&gt;A Community Manager is assigned to monitor and manage the social media networks, posts, replies and publication schedule.&lt;/p&gt;"><p>Administración de las cuentas del programa en las principales redes sociales como Facebook, Twitter, Instagram, Pinterest y LinkedIn, de acuerdo a los objetivos del programa y de los segmentos objetivo.</p><p>Servicios de Community Manager para la administración de las redes sociales, publicaciones, respuesta y gestión de pautas.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;A Community Manager is assigned to each Loyalty or Incentive Program to monitor and manage the Communication Strategy of the Program and of social media in terms of the overall Marketing Strategy. &lt;/p&gt;&lt;p&gt;Selected social media platforms are chosen for each Program according to its objective and target. &lt;/p&gt;"><p>Administración de las cuentas del programa en las principales redes sociales de acuerdo a los objetivos del programa y de los segmentos objetivo, como Facebook, Twitter, Instagram, Pinterest, LinkedIn, YouTube e incluyendo herramientas de monitoreo y escucha activa de redes sociales.</p><p>Se asigna un Community Manager para la supervisión y administración de la estrategia de comunicación del programa en las redes sociales. </p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="apps-y-soluciones-moviles"><img class="img-circle" src="app/img/servicios/apps-y-soluciones-moviles.png">
           <h4 class="mt-3" data-l="Apps &amp; Mobile Solutions">Apps y Soluciones Móviles</h4>
-          <div class="text-left" data-l="&lt;p&gt;We design technological solutions for the Loyalty or Incentive Program so that the customer can interact with the program in a dynamic and intuitive way through their mobile devices.&lt;/p&gt;"><p>Diseñamos soluciones tecnológicas para que el usuario final se relacione con el Programas de Lealtad de una manera dinámica, interactiva e intuitiva por medio de sus dispositivos móviles.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;We design Technological Solutions for the Loyalty or Incentive Program so that the customer can interact with the program in a dynamic and intuitive way through their mobile devices.&lt;/p&gt;"><p>Diseñamos soluciones tecnológicas para que el usuario final se relacione con el Programas de Lealtad de una manera dinámica, interactiva e intuitiva por medio de sus dispositivos móviles.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="e-commerce-tienda-en-linea"><img class="img-circle" src="app/img/servicios/e-commerce-tienda-en-linea.png">
           <h4 class="mt-3" data-l="e-Commerce &amp; Online Stores">E-Commerce &amp; Tienda en Línea</h4>
-          <div class="text-left" data-l="&lt;p&gt;Definition, development, implementation and operation of online stores so that our customers can sell their products and services over the Internet. Our services include all the services needed to sell and deliver products and services to your end customers including from the website design, shopping cart, catalog management, payment methods, courier shipping and tracking shipments until final customer delivery.&lt;/p&gt;"><p>Definición, desarrollo, implementación y operación de tiendas en línea para que nuestros clientes puedan vender sus productos y servicios por internet . Nuestros servicios incluyen todo lo necesario para vender y entregar los productos y servicios a sus clientes incluyendo desde el diseño del sitio, carrito de compra, administración de catálogos, formas de pago, envíos por mensajería y el seguimiento de envíos hasta su entrega a cliente final.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;Definition, development, implementation and operation of online stores so that our customers can sell their products and services over the Internet. Our services include all the services needed to sell and deliver products and services to your end customers including from the website design, shopping cart, catalog management, payment methods, courier shipping and tracking shipments until final customer delivery.&lt;/p&gt;"><p>Definición, desarrollo, implementación y operación de tiendas en línea para que nuestros clientes puedan vender sus productos y servicios por internet . Nuestros servicios incluyen todos los servicios necesarios para vender y entregar los productos y servicios a sus clientes incluyendo desde el diseño del sitio, carrito de compra, administración de catálogos, formas de pago, envíos por mensajería y el seguimiento de envíos hasta su entrega a cliente final.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
@@ -486,7 +389,7 @@
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="monederos-electronicos"><img class="img-circle" src="app/img/servicios/monederos-electronicos.png">
           <h4 class="mt-3" data-l="Electronic Wallets">Monederos Electrónicos</h4>
-          <div class="text-left" data-l="&lt;p&gt;Development of electronic wallets to earn points or electronic currency. We connect with Customer´s Point of Sale so that they can be used in real time.&lt;/p&gt;"><p>Desarrollo de Monederos Electrónicos para acumulación de puntos o dinero electrónico, nos conectamos con los sistemas de venta de nuestros clientes para que puedan ser utilizados en tiempo real.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;Development of electronic wallets for the accumulation of points or electronic currency. We connect with Customer´s Point of Sale so that they can be used in real time.&lt;/p&gt;"><p>Desarrollo de Monederos Electrónicos para acumulación de puntos o dinero electrónico, nos conectamos con los sistemas de venta de nuestros clientes para que puedan ser utilizados en tiempo real.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
@@ -498,13 +401,13 @@
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="alianzas-comerciales"><img class="img-circle" src="app/img/servicios/alianzas-comerciales.png">
           <h4 class="mt-3" data-l="Commercial Alliances">Alianzas Comerciales</h4>
-          <div class="text-left" data-l="&lt;p&gt;Business unit dedicated to the search and negotiation of commercial alliances with third party companies. We currently have a wide network of commercial allies in various business areas that offer benefits, discounts and promotions for end customers, sales agents and employees of our Loyalty and Incentive Programs.&lt;/p&gt;"><p>Área dedicada a la búsqueda y negociación de Alianzas comerciales con empresas terceras. Actualmente, contamos con una amplia red de aliados comerciales de diversos giros que ofrecen beneficios y descuentos para los clientes finales, fuerza de ventas, canal de ventas y empleados de nuestros Programas de Lealtad y de Incentivos.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;Business Unit dedicated to the search and negotiation of commercial alliances with third party companies. We currently have a wide network of commercial allies in various business areas that offer benefits, discounts and promotions end customers, sales agents and employees of our Loyalty and Incentive Programs.&lt;/p&gt;"><p>Área dedicada a la búsqueda y negociación de Alianzas comerciales con empresas terceras. Actualmente, contamos con una amplia red de aliados comerciales de diversos giros que ofrecen beneficios y descuentos para los clientes finales, fuerza de ventas, canal de ventas y empleados de nuestros Programas de Lealtad y de Incentivos.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
         <div class="col-md-6 col-sm text-center mt-5" id="contact-center"><img class="img-circle" src="app/img/servicios/contact-center.png">
           <h4 class="mt-3" data-l="Contact Center">Contact Center</h4>
-          <div class="text-left" data-l="&lt;p&gt;Contact stations dedicated to the reception and response via telephone and email of the Loyalty and Incentive Program´s members and online stores.&lt;/p&gt;"><p>Estaciones de contacto dedicadas a la recepción y respuesta vía telefónica y correo electrónico a socios de los Programas de Lealtad y tiendas en línea.</p></div>
+          <div class="text-left" data-l="&lt;p&gt;Contact stations dedicated to the reception and response via telephone and email of the Loyalty and Incentive Program´s members.&lt;/p&gt;"><p>Estaciones de contacto dedicadas a la recepción y respuesta vía telefónica y correo electrónico a socios de los Programas de Lealtad.</p></div>
           <div class="text-right"><a class="smooth-scroll" href="#servicios">
               <div class="fa fa-chevron-up"></div></a></div>
         </div>
@@ -527,32 +430,7 @@
       </div>
     </div>
   </section>
-  <section id="blue-wallet">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col text-center"><img class="img-fluid" src="app/img/bwallet/bwallet.png" alt="Blue Wallet">
-          <h3 class="mt-2" data-l="KEEP ALL YOUR LOYALTY PROGRAM AND INCENTIVE CARDS HANDY.">TEN TODAS TUS TARJETAS DE LEALTAD A LA MANO®</h3>
-        </div>
-      </div>
-      <div class="row justify-content-center vertical-align mt-2">
-        <div class="col-md-3 col-12 text-center blwalleticon"><img class="img-fluid" src="app/img/bwallet/bw.png" alt="Blue Wallet App"></div>
-        <div class="col">
-          <ul>
-            <li data-l="Sign Up">Regístrate</li>
-            <li data-l="Generate your Virtual card for each program">Genera tu Tarjeta Virtual de cada programa</li>
-            <li data-l="Earn and Redeem points">Acumula y Canjea Puntos</li>
-            <li data-l="Check your status, balance and transactions">Consulta tu Saldo y Movimientos</li>
-            <li data-l="Locate the nearest stores">Ubica las Tiendas más cercanas</li>
-            <li data-l="Receive Special Promotions">Recibe Promociones especiales</li>
-            <li data-l="And much more">Y mucho más</li>
-          </ul>
-          <h4 class="text-center mt-5" data-l="DOWNLOAD FOR FREE RIGHT NOW!">¡DESCÁRGALA GRATIS AHORA MISMO!</h4>
-          <div class="row text-center mt-3 mb-2"><a class="col" href="https://play.google.com/store/apps/details?id=com.bluepureloyalty.BlueWallet" target="_blank"><img class="img-fluid" src="app/img/bwallet/google-play.png" alt="Descargar en Google Play"></a><a class="col" href="https://itunes.apple.com/us/app/bluewallet/id1202908122?mt=8" target="_blank"><img class="img-fluid" src="app/img/bwallet/app-store.png" alt="Descargar en App Store"></a></div>
-        </div>
-        <div class="col-md-4 col-12"><img class="img-fluid" src="app/img/bwallet/descarga.png" alt="Blue Wallet App"></div>
-      </div>
-    </div>
-  </section>
+  <!--include modulos/_bluewallet-->
   <section id="clientes">
     <div class="container">
       <div class="row justify-content-center">
@@ -620,16 +498,15 @@
           <h2 data-l="News">Noticias</h2>
         </div>
       </div>
-      <div class="latestNew">
-        <div class="row justify-content-center vertical-align mt-2">
-          <div class="col-md-6"><img class="d-none d-md-block w-100" src="-" alt="Noticias" data-parse="image"/></div>
-          <div class="col-md-6 text-center">
-            <h4 class="mt-3" data-l="-" data-parse="titulo">-</h4><img class="d-block d-md-none w-100" src="" alt="" data-parse="image"/>
-            <p class="small" data-l="-" data-parse="fecha">-</p>
-            <p data-parse="intro" data-l="-">-</p>
-            <p class="hide-us"><a href="noticias_articulo.html" data-l="Read more" data-parse="uri">Seguir leyendo</a></p>
-            <p class="hide-mx"><a href="noticias_articulo_us.html" data-l="Read more" data-parse="uri">Seguir leyendo</a></p>
-          </div>
+      <div class="row justify-content-center vertical-align mt-2">
+        <div class="col-md-6"><img class="d-none d-md-block w-100" src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Noticias"/></div>
+        <div class="col-md-6 text-center">
+          <h4 class="mt-3" data-l="Diablos Rojos of Mexico will launch the club´s Loyalty Program “Club Diablos” y “Club Diablos Kids”.">Diablos Rojos del México lanzará el Programa de Lealtad “Club Diablos” y “Club Diablos Kids”</h4><img class="d-block d-md-none w-100" src="https://source.unsplash.com/yXdJ8QVZlIA/548x300" alt="Experiencia"/>
+          <p class="small" data-l="Mexico City, February 28, 2019.">Ciudad de México, 28 de febrero de 2019.</p>
+          <p><strong>Let’s play ball</strong></p>
+          <p data-l="Diablos Rojos of Mexico have thrown the first pitch at the most ambitious and successful project in sports of Mexico. Uniting their talent with the leading company in Loyalty Programs, Blue Pure Loyalty, together create the first Loyalty Program for baseball fans “Club Diablos” &amp; “Club Diablos Kids” thought out to reward their fans loyalty for their love of their team.">Diablos Rojos del México es el primero en lanzar la pelota al proyecto más ambicioso y exitoso del deporte en México. Uniendo su talento junto con la empresa líder en Programas de Lealtad, Blue Pure Loyalty, crean el primer programa pensado en la afición beisbolera “Club Diablos” y “Club Diablos Kids” pensando en recompensar y premiar la lealtad de su afición por el amor a su equipo.</p>
+          <p class="hide-us"><a href="noticias_articulo.html" data-l="Read more">Seguir leyendo</a></p>
+          <p class="hide-mx"><a href="noticias_articulo_us.html" data-l="Read more">Seguir leyendo</a></p>
         </div>
       </div>
       <div class="row justify-content-center mt-5 pt-5"><a class="btn btn-secondary hide-us" href="noticias.html" data-l="More news">Ver más noticias</a><a class="btn btn-secondary hide-mx" href="noticias_us.html" data-l="More news">Ver más noticias</a></div>
@@ -639,11 +516,11 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col text-center">
-          <h2 data-l="DISCOVER THE POWER OF LOYALTY">DESCUBRE EL PODER DE LA LEALTAD</h2>
+          <h2 data-l="DISCOVER THE POWER OF LOYALTY">DESCRUBRE EL PODER DE LA LEALTAD</h2>
           <h3 data-l="CONTACT US">CONTÁCTANOS</h3>
           <p><a class="btn btn-secondary" href="mailto:info@bluepureloyalty.com">info@bluepureloyalty.com</a></p>
-          <p><a class="btn btn-default" href="tel:5521673200">+(55) 2167 3200</a></p>
-          <p><span data-l="From 9:00 to 18:00 hours">De 9:00 a 18:00 horas</span><br><span data-l="Mexico Central Time">Hora del centro de México</span><br><span data-l="Monday to Friday">Lunes a Viernes</span></p>
+          <p><a class="btn btn-default" href="tel:18442170744">+1 844 217 0744</a></p>
+          <p><span data-l="From 9:00 to 18:00 hours">De 9:00 a 18:00 horas</span><br><span data-l="Central Standard Time (CST)">Hora estándar del centro</span><br><span data-l="Monday to Friday">Lunes a Viernes</span></p>
         </div>
       </div>
     </div>
@@ -692,7 +569,7 @@
           <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
         </div>
         <div class="modal-body">
-          <h4 data-l="Select an area">Selecciona un área</h4>
+          <h4 data-l="Select and area">Selecciona un área</h4>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-primary active">
               <input type="radio" name="unete" checked="checked" val="Marketing"/><span data-l="Marketing">Mercadotecnia</span>
@@ -713,7 +590,7 @@
               <input type="radio" name="unete" val="Compras"/><span data-l="Procurement">Compras</span>
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name="unete" val="Fulfillment"/><span data-l="Fulfillment">Fulfillment</span>
+              <input type="radio" name="unete" val="Fulfillment"/><span data-l="Fullfilment">Fulfillment</span>
             </label>
             <label class="btn btn-primary hide-us">
               <input type="radio" name="unete" val="Alianzas comerciales"/><span data-l="Commercial Alliances">Alianzas comerciales</span>
@@ -731,7 +608,7 @@
     <div class="container">
       <div class="text-center"><a href="http://www.bluepureloyalty.com/" target="_blank"><img src="app/img/powered.png"/></a></div>
       <div class="row mt-4">
-        <div class="col d-none d-md-block"><a href="tel:5521673200">+(55) 2167 3200</a>
+        <div class="col d-none d-md-block"><a href="tel:18442170744">+1 844 217 0744</a>
         </div>
         <div class="col-12 col-md text-center">
           <div class="row socials"><a class="col fa fa-facebook hide-us" href="https://www.facebook.com/Blue-Pure-Loyalty-155921304583101/" target="_blank"></a><a class="col fa fa-facebook hide-mx" href="https://www.facebook.com/Blue-Pure-Loyalty-US-253954128830079/" target="_blank"></a><a class="col fa fa-linkedin" href="https://www.linkedin.com/company/blue-pure-loyalty/" target="_blank"></a><a class="col fa fa-twitter hide-us" href="https://twitter.com/blueloyalty_mx" target="_blank"></a><a class="col fa fa-twitter hide-mx" href="https://twitter.com/blueloyalty_us" target="_blank"></a><a class="col fa fa-instagram hide-us" href="https://www.instagram.com/bluepureloyalty_mx/" target="_blank"></a><a class="col fa fa-instagram hide-mx" href="https://www.instagram.com/blueloyalty_us/" target="_blank"></a></div>
@@ -758,93 +635,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script>
     $(document).ready(function(){
+      
       $('.homeSlider').slick({
         autoplay: true,
         autoplaySpeed: 4500
       })
+      
       $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
         $('.navbar-collapse').removeClass('show');
         $('.navbar-toggler').addClass('collapsed');
         scroller($(this.hash));
         
       });
-    
-      /* NEWS IN HOME */
-      if($('.latestNew').length > 0){
-        $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
-          $('[data-parse=image]').attr('src', data[0].image);
-          if(Cookies.get('bluelang') == 'en'){
-            $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
-            $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
-            $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
-          } else {
-            $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
-            $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
-            $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
-          }
-          var uriregular = $('[data-parse=uri]').attr('href')
-          $('[data-parse=uri]').attr('href', uriregular+'#'+data[0].uri)
-          //SECOND
-          if($('.secondNew').length>0){
-            $('.secondNew [data-parse=image]').attr('src', data[1].image);
-            if(Cookies.get('bluelang') == 'en'){
-              $('.secondNew [data-parse=titulo]').text(data[1].en.titulo).attr('data-l', data[0].es.titulo);
-              $('.secondNew [data-parse=fecha]').text(data[1].en.fecha).attr('data-l', data[0].es.fecha);
-              $('.secondNew [data-parse=intro]').text(data[1].en.intro).attr('data-l', data[0].es.intro);
-            } else {
-              $('.secondNew [data-parse=titulo]').text(data[1].es.titulo).attr('data-l', data[0].en.titulo);
-              $('.secondNew [data-parse=fecha]').text(data[1].es.fecha).attr('data-l', data[0].en.fecha);
-              $('.secondNew [data-parse=intro]').text(data[1].es.intro).attr('data-l', data[0].en.intro);
-            }
-            var uriregular = $('.secondNew [data-parse=uri]').attr('href')
-            $('.secondNew [data-parse=uri]').attr('href', uriregular+'#'+data[1].uri)
-          }
-    
-        }})
-      }
-    
-      if($('.fullNew').length > 0) {
-        if(window.location.hash){
-          var wichNew = window.location.hash
-          $('.usmx a').each(function(item){
-            var uriregular = $(this).attr('href');
-            $(this).attr('href', uriregular+wichNew);
-          });
-    
-          $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
-            for(var dt in data){
-              console.log(wichNew + ' >>  '+ data[dt].uri)
-              if('#'+data[dt].uri == wichNew){
-                $('[data-parse=image]').attr('src', data[dt].image);
-                if(Cookies.get('bluelang') == 'en'){
-                  $('[data-parse=titulo]').text(data[dt].en.titulo).attr('data-l', data[dt].es.titulo);
-                  $('[data-parse=fecha]').text(data[dt].en.fecha).attr('data-l', data[dt].es.fecha);
-                  $('[data-parse=intro]').text(data[dt].en.intro).attr('data-l', data[dt].es.intro);
-                  $('[data-parse=nota]').html(data[dt].en.nota).attr('data-l', data[dt].es.nota);
-                } else {
-                  $('[data-parse=titulo]').text(data[dt].es.titulo).attr('data-l', data[dt].en.titulo);
-                  $('[data-parse=fecha]').text(data[dt].es.fecha).attr('data-l', data[dt].en.fecha);
-                  $('[data-parse=intro]').text(data[dt].es.intro).attr('data-l', data[dt].en.intro);
-                  $('[data-parse=nota]').html(data[dt].es.nota).attr('data-l', data[dt].en.nota);
-                }
-              }
-            }
-            /*
-            $('[data-parse=image]').attr('src', data[0].image);
-            if(Cookies.get('bluelang') == 'en'){
-              $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
-              $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
-              $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
-            } else {
-              $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
-              $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
-              $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
-            }*/
-          }});
-        }  else {
-          window.history.back()
-        }
-      }
     
       /* LANGUAGE */
       //StoredLang
@@ -942,6 +744,9 @@
         $('.lang-en').hide();
         $('.lang-es').show();
       }
+    
+      
+    
     }
     
     
