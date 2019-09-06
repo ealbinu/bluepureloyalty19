@@ -50,18 +50,18 @@ mixin scripts
       /* NEWS IN HOME */
       if($('.latestNew').length > 0){
         $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
-          $('[data-parse=image]').attr('src', data[0].image);
+          $('.latestNew [data-parse=image]').attr('src', data[0].image);
           if(Cookies.get('bluelang') == 'en'){
-            $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
-            $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
-            $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
+            $('.latestNew [data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
+            $('.latestNew [data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
+            $('.latestNew [data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
           } else {
-            $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
-            $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
-            $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
+            $('.latestNew [data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
+            $('.latestNew [data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
+            $('.latestNew [data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
           }
           var uriregular = $('[data-parse=uri]').attr('href')
-          $('[data-parse=uri]').attr('href', uriregular+'#'+data[0].uri)
+          $('.latestNew [data-parse=uri]').attr('href', uriregular+'#'+data[0].uri)
           //SECOND
           if($('.secondNew').length>0){
             $('.secondNew [data-parse=image]').attr('src', data[1].image);
@@ -74,8 +74,9 @@ mixin scripts
               $('.secondNew [data-parse=fecha]').text(data[1].es.fecha).attr('data-l', data[0].en.fecha);
               $('.secondNew [data-parse=intro]').text(data[1].es.intro).attr('data-l', data[0].en.intro);
             }
-            var uriregular = $('.secondNew [data-parse=uri]').attr('href')
-            $('.secondNew [data-parse=uri]').attr('href', uriregular+'#'+data[1].uri)
+            var uriregular2 = $('.secondNew [data-parse=uri]').attr('href')
+            $('.secondNew [data-parse=uri]').attr('href', uriregular2+'#'+data[1].uri)
+            console.log(uriregular2)
           }
 
         }})
