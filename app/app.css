@@ -978,6 +978,10 @@ header li.separator {
     flex-basis: 50%;
   }
 
+  #newsletterAlert{
+    display: none;
+  }
+
  
 
   .resultsimg{
@@ -1147,7 +1151,7 @@ header li.separator {
 
 #noticias{
   background: #eee;
-  padding-bottom: 220px;
+  padding-bottom: 280px;
   margin-bottom: 30px;
 }
 #noticias .mt-2{
@@ -1229,4 +1233,9 @@ header li.separator {
 #quienes-somos .mt-2{
   margin-top: 60px !important;
   margin-bottom: 60px !important;
+}
+
+
+.servicesdetails{
+  margin-top: 200px !important;
 }

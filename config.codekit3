@@ -16,6 +16,16 @@
 		"oAP": "\/.gitattributes",
 		"oF": 0
 		},
+	"\/app\/app-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/app\/app-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/app\/app.css": {
 		"aP": 1,
 		"bl": 0,

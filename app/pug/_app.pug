@@ -36,6 +36,13 @@ mixin scripts
   script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
   script.
     $(document).ready(function(){
+      $('#newsletterform').submit(function(e){
+        e.preventDefault();
+        $('#newsletterAlert').slideDown();
+      })
+
+
+
       $('.homeSlider').slick({
         autoplay: true,
         autoplaySpeed: 4500
@@ -60,8 +67,11 @@ mixin scripts
             $('.latestNew [data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
             $('.latestNew [data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
           }
-          var uriregular = $('[data-parse=uri]').attr('href')
-          $('.latestNew [data-parse=uri]').attr('href', uriregular+'#'+data[0].uri)
+          $('.latestNew [data-parse=uri]').each(function(){
+            var uriregular = $(this).attr('href')
+            $(this).attr('href', uriregular+'#'+data[0].uri)
+          })
+          
           //SECOND
           if($('.secondNew').length>0){
             $('.secondNew [data-parse=image]').attr('src', data[1].image);
@@ -74,9 +84,11 @@ mixin scripts
               $('.secondNew [data-parse=fecha]').text(data[1].es.fecha).attr('data-l', data[0].en.fecha);
               $('.secondNew [data-parse=intro]').text(data[1].es.intro).attr('data-l', data[0].en.intro);
             }
-            var uriregular2 = $('.secondNew [data-parse=uri]').attr('href')
-            $('.secondNew [data-parse=uri]').attr('href', uriregular2+'#'+data[1].uri)
-            console.log(uriregular2)
+            $('.secondNew [data-parse=uri]').each(function(){
+              var uriregular = $(this).attr('href')
+              $(this).attr('href', uriregular+'#'+data[1].uri)
+            })
+
           }
 
         }})
@@ -92,7 +104,6 @@ mixin scripts
 
           $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
             for(var dt in data){
-              console.log(wichNew + ' >>  '+ data[dt].uri)
               if('#'+data[dt].uri == wichNew){
                 $('[data-parse=image]').attr('src', data[dt].image);
                 if(Cookies.get('bluelang') == 'en'){
@@ -108,17 +119,7 @@ mixin scripts
                 }
               }
             }
-            /*
-            $('[data-parse=image]').attr('src', data[0].image);
-            if(Cookies.get('bluelang') == 'en'){
-              $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
-              $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
-              $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
-            } else {
-              $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
-              $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
-              $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
-            }*/
+
           }});
         }  else {
           window.history.back()
@@ -127,9 +128,9 @@ mixin scripts
 
       /* LANGUAGE */
       //StoredLang
-      if( Cookies.get('bluelang') == undefined ){
+      if( Cookies.get('bluelang') == undefined || Cookies.get('bluelang') == "" ){
         Cookies.set('bluelang', 'es');
-        changeLang();
+        //changeLang();
       } else if(Cookies.get('bluelang') == 'en'){
         changeLang();
       } 

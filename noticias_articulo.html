@@ -169,7 +169,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-5 offset-sm-1 image"><img class="mainsliderslide-logo img-fluid" src="app/img/logos/cinepolis_store.svg"></div>
                     <div class="col-12 col-sm-6 text">
-                      <div class="titulo"><span data-l="Online store, trivia, auctions">Tienda en línea, trivias, subastas</span></div>
+                      <div class="titulo"><span data-l="Online store, trivias, auctions">Tienda en línea, trivias, subastas</span></div>
                       <div class="subtitulo" data-l="and much more!">¡y mucho más!</div><img src="app/img/logos/club_cinepolis.svg" style="max-width:240px">
                     </div>
                   </div>
@@ -435,6 +435,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script>
     $(document).ready(function(){
+      $('#newsletterform').submit(function(e){
+        e.preventDefault();
+        $('#newsletterAlert').slideDown();
+      })
+    
+    
+    
       $('.homeSlider').slick({
         autoplay: true,
         autoplaySpeed: 4500
@@ -459,8 +466,11 @@
             $('.latestNew [data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
             $('.latestNew [data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
           }
-          var uriregular = $('[data-parse=uri]').attr('href')
-          $('.latestNew [data-parse=uri]').attr('href', uriregular+'#'+data[0].uri)
+          $('.latestNew [data-parse=uri]').each(function(){
+            var uriregular = $(this).attr('href')
+            $(this).attr('href', uriregular+'#'+data[0].uri)
+          })
+          
           //SECOND
           if($('.secondNew').length>0){
             $('.secondNew [data-parse=image]').attr('src', data[1].image);
@@ -473,9 +483,11 @@
               $('.secondNew [data-parse=fecha]').text(data[1].es.fecha).attr('data-l', data[0].en.fecha);
               $('.secondNew [data-parse=intro]').text(data[1].es.intro).attr('data-l', data[0].en.intro);
             }
-            var uriregular2 = $('.secondNew [data-parse=uri]').attr('href')
-            $('.secondNew [data-parse=uri]').attr('href', uriregular2+'#'+data[1].uri)
-            console.log(uriregular2)
+            $('.secondNew [data-parse=uri]').each(function(){
+              var uriregular = $(this).attr('href')
+              $(this).attr('href', uriregular+'#'+data[1].uri)
+            })
+    
           }
     
         }})
@@ -491,7 +503,6 @@
     
           $.ajax({dataType: "json", url: "noticias/index.json", success: function (data){
             for(var dt in data){
-              console.log(wichNew + ' >>  '+ data[dt].uri)
               if('#'+data[dt].uri == wichNew){
                 $('[data-parse=image]').attr('src', data[dt].image);
                 if(Cookies.get('bluelang') == 'en'){
@@ -507,17 +518,7 @@
                 }
               }
             }
-            /*
-            $('[data-parse=image]').attr('src', data[0].image);
-            if(Cookies.get('bluelang') == 'en'){
-              $('[data-parse=titulo]').text(data[0].en.titulo).attr('data-l', data[0].es.titulo);
-              $('[data-parse=fecha]').text(data[0].en.fecha).attr('data-l', data[0].es.fecha);
-              $('[data-parse=intro]').text(data[0].en.intro).attr('data-l', data[0].es.intro);
-            } else {
-              $('[data-parse=titulo]').text(data[0].es.titulo).attr('data-l', data[0].en.titulo);
-              $('[data-parse=fecha]').text(data[0].es.fecha).attr('data-l', data[0].en.fecha);
-              $('[data-parse=intro]').text(data[0].es.intro).attr('data-l', data[0].en.intro);
-            }*/
+    
           }});
         }  else {
           window.history.back()
@@ -526,9 +527,9 @@
     
       /* LANGUAGE */
       //StoredLang
-      if( Cookies.get('bluelang') == undefined ){
+      if( Cookies.get('bluelang') == undefined || Cookies.get('bluelang') == "" ){
         Cookies.set('bluelang', 'es');
-        changeLang();
+        //changeLang();
       } else if(Cookies.get('bluelang') == 'en'){
         changeLang();
       } 
