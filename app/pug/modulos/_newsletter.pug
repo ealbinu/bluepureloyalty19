@@ -5,7 +5,8 @@ section#suscribete
           h3(data-l="SIGN UP FOR OUR NEWSLETTER").signupTitle SUSCRÍBETE A NUESTRO NEWSLETTER
       .row.justify-content-center
         .col-8
-          form(action="#").form-inline.text-center#newsletterform
-            input(type="email" placeholder="Email" required).form-control
+          form(action="#" novalidate).form-inline.text-center#newsletterform
+            input(type="email" placeholder="Email" required)#newsmail.form-control
             button(type="submit" data-l="Sign Up").btn.btn-primary Suscribirme
-          .alert.alert-secondary.text-center.mt-3(data-l="Thank you for signing up!")#newsletterAlert ¡Gracias por suscribirte!
+          .alert.alert-warning.text-center.mt-1.hidealert(data-l="Please enter a valid email address")#emailValidationMsj Ingresa un correo válido
+          .alert.alert-secondary.text-center.mt-3.hidealert(data-l="Thank you for signing up!")#newsletterAlert ¡Gracias por suscribirte!

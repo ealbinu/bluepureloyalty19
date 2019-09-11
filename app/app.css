@@ -977,11 +977,9 @@ header li.separator {
     flex-grow: 1;
     flex-basis: 50%;
   }
-
-  #newsletterAlert{
+  .hidealert{
     display: none;
   }
-
  
 
   .resultsimg{
