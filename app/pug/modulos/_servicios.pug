@@ -35,7 +35,7 @@ section#servicios
     .row.justify-content-center.text-center.mt-5.servicesdetails
       each sr, index in serv
         if index<4
-          .col-md-12( id=slugify(sr[0]) ).text-center.mt-5
+          .col-md-12( id=slugify(sr[0]) ).text-center.mainservicescontent
             img(src="app/img/servicios/"+slugify(sr[0])+".png").img-circle
             h4.mt-3(data-l=sr[2])=sr[0]
             div.text-left(data-l=sr[3]) !{sr[1]}

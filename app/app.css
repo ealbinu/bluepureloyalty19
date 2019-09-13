@@ -470,8 +470,8 @@ input.form-control, select.form-control, textarea.form-control{
 
 
 #contacto{
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 300px;
+  margin-bottom: 40px;
   padding-top:20px;
   padding-bottom: 10px;
 
@@ -1236,4 +1236,15 @@ header li.separator {
 
 .servicesdetails{
   margin-top: 200px !important;
+}
+
+
+.mainservicescontent:nth-child(even){
+  box-shadow: 0 0 80px #e8e8e8;
+}
+.mainservicescontent:nth-child(odd){
+  background: linear-gradient(to left, #fff, #EEEEEE, #fff);
+}
+.mainservicescontent{
+  padding: 80px 20px;
 }
