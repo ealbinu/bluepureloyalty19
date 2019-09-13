@@ -389,20 +389,20 @@ mixin footer(inside)
         span(data-l="Other") Otros
     .text-center.mt-3.mb-3
       a(href="mailto:info@bluepureloyalty.com?subject=Mercadotecnia" data-l="Send your CV").btn.btn-secondary.joinbtn Envía tu CV
-
+      p: small(data-l="Your mail app will open.") Se abrirá tu app de correo.
 
   
   footer
     .container
       .text-center: a(href="http://www.bluepureloyalty.com/" target="_blank"): img(src="app/img/powered.png")
-      .row.mt-4
-        .col.d-none.d-md-block
+      .row.mt-4.justify-content-center
+        //.col.d-none.d-md-block
           if inside
             a(href="tel:5521673200") +(55) 2167 3200
           else
             a(href="tel:18442170744") +1 844 217 0744
 
-        .col-12.col-md.text-center
+        .col-4.text-center
           .row.socials
           
             a(href="https://www.facebook.com/Blue-Pure-Loyalty-155921304583101/" target="_blank").col.fa.fa-facebook.hide-us
@@ -416,9 +416,9 @@ mixin footer(inside)
             a(href="https://www.instagram.com/bluepureloyalty_mx/" target="_blank").col.fa.fa-instagram.hide-us
             a(href="https://www.instagram.com/blueloyalty_us/" target="_blank").col.fa.fa-instagram.hide-mx
 
-        .col.d-none.d-md-block.text-right: a(href="mailto:info@bluepureloyalty.com") info@bluepureloyalty.com
+        //.col.d-none.d-md-block.text-right: a(href="mailto:info@bluepureloyalty.com") info@bluepureloyalty.com
 
-        .col.d-block.d-md-none.text-center.mt-4
+        //.col.d-block.d-md-none.text-center.mt-4
           a(href="tel:5521673200") +(55) 2167 3200
           br
           a(href="mailto:info@bluepureloyalty.com") info@bluepureloyalty.com
