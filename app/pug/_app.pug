@@ -352,10 +352,13 @@ mixin footer(inside)
   include modulos/_legales
 
   .cookies
-    p(data-l="This website uses cookies to improve your experience. Continue to use the site as normal if you agree to the use of cookies. If you’d like to find out more about the cookies we use or to opt-out, please see our Privacy Policy.") Este sitio web utiliza cookies para mejorar tu experiencia. Si continúas navegando en el sitio, significa que aceptas el uso de las cookies. Si deseas más información sobre las cookies que empleamos y cómo manejarlas visita nuestra Política de Privacidad.
-    p
-      a(href="#" data-toggle="modal" data-target="#aviso" data-l="More information").btn.btn-dark.btn-sm Más información
-      button.btn.btn-light.btn-cookies(data-l="Continue") Continuar
+    .container
+      .row
+        .col-12.col-md-9
+          p(data-l="This website uses cookies to improve your experience. Continue to use the site as normal if you agree to the use of cookies. If you’d like to find out more about the cookies we use or to opt-out, please see our ") Este sitio web utiliza cookies para mejorar tu experiencia. Si continúas navegando en el sitio, significa que aceptas el uso de las cookies. Si deseas más información sobre las cookies que empleamos y cómo manejarlas visita nuestra  
+            a(href="#" data-toggle="modal" data-target="#aviso" data-l="Privacy Policy.") Política de Privacidad.
+        .col-12.col-md-3.text-center
+          button.btn.btn-light.btn-cookies(data-l="Continue") Continuar
   
   +modal('unete', '<span data-l="Join the Blue Team">Únete al Blue Team</span>')
     h4(data-l="Select an area") Selecciona un área

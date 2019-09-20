@@ -969,6 +969,50 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/app\/img\/fortalezas\/_innovacion.jpg": {
+		"ft": 16384,
+		"iS": 33043,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/app\/img\/fortalezas\/_innovacion.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/fortalezas\/_pensamiento_estrategico.jpg": {
+		"ft": 16384,
+		"iS": 43319,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/app\/img\/fortalezas\/_pensamiento_estrategico.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/fortalezas\/_soluciones_llave_en_mano.jpg": {
+		"ft": 16384,
+		"iS": 24374,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/app\/img\/fortalezas\/_soluciones_llave_en_mano.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/fortalezas\/_valor_agregado.jpg": {
+		"ft": 16384,
+		"iS": 26968,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/app\/img\/fortalezas\/_valor_agregado.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/app\/img\/fortalezas\/exitos_probados.jpg": {
 		"ft": 16384,
 		"iS": 30627,
@@ -993,7 +1037,7 @@
 		},
 	"\/app\/img\/fortalezas\/innovacion.jpg": {
 		"ft": 16384,
-		"iS": 33043,
+		"iS": 58555,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/app\/img\/fortalezas\/innovacion.jpg",
@@ -1004,7 +1048,7 @@
 		},
 	"\/app\/img\/fortalezas\/pensamiento_estrategico.jpg": {
 		"ft": 16384,
-		"iS": 43319,
+		"iS": 50001,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/app\/img\/fortalezas\/pensamiento_estrategico.jpg",
@@ -1015,7 +1059,7 @@
 		},
 	"\/app\/img\/fortalezas\/soluciones_llave_en_mano.jpg": {
 		"ft": 16384,
-		"iS": 24374,
+		"iS": 23566,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/app\/img\/fortalezas\/soluciones_llave_en_mano.jpg",
@@ -1026,7 +1070,7 @@
 		},
 	"\/app\/img\/fortalezas\/valor_agregado.jpg": {
 		"ft": 16384,
-		"iS": 26968,
+		"iS": 48442,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/app\/img\/fortalezas\/valor_agregado.jpg",

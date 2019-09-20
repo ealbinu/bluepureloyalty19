@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5{
   max-height: 42px;
 }
 nav.navbar.fixed-top{
-  padding: 0;
+  padding: 20px 0;
   font-size: 0.9rem;
 }
 
@@ -171,7 +171,7 @@ footer .footer-nav a{
   background: var(--bluemx);
   font-size: 0.7em;
   line-height: 0.8em;
-  padding: 10px;
+  padding: 20px;
   // border-top: 8px solid var(--colSec);
 }
 .bluemx a{
@@ -689,7 +689,7 @@ footer .socials a:hover{
 }
 
 .clientelogo{
-  max-width: 100px;
+  max-width: 120px;
 }
 
 #clientes img{
@@ -1188,14 +1188,19 @@ header li.separator {
   left: 0;
   right: 0;
   width: 100%;
-  background: #0A1E3F;
+  background: var(--colSec);
   z-index: 1;
+}
+.cookies a{
+  color: var(--colMain);
 }
 .cookies p{
   font-size: 0.9em;
-  text-align: center;
   color: #fff;
   margin: 10px;
+}
+.cookies .btn{
+  margin: 20px auto;
 }
 
 

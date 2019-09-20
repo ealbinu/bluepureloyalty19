@@ -25,23 +25,26 @@ section#servicios
     - serv.push(['Alianzas Comerciales', '<p>Área dedicada a la búsqueda y negociación de Alianzas comerciales con empresas terceras. Actualmente, contamos con una amplia red de aliados comerciales de diversos giros que ofrecen beneficios y descuentos para los clientes finales, fuerza de ventas, canal de ventas y empleados de nuestros Programas de Lealtad y de Incentivos.</p>', 'Commercial Alliances', '<p>Business unit dedicated to the search and negotiation of commercial alliances with third party companies. We currently have a wide network of commercial allies in various business areas that offer benefits, discounts and promotions for end customers, sales agents and employees of our Loyalty and Incentive Programs.</p>'])
     - serv.push(['Contact Center', '<p>Estaciones de contacto dedicadas a la recepción y respuesta vía telefónica y correo electrónico a socios de los Programas de Lealtad.</p>', 'Contact Center', '<p>Contact stations dedicated to the reception and response via telephone and email of the Loyalty and Incentive Program´s members.</p>'])
     - serv.push(['Process Center', '<p>Depuración y enriquecimiento de base de datos, incluyendo su desduplicación, actualización, estandarización y enriquecimiento de los campos y valores, así como la digitalización y almacenamiento en la base de datos.</p>', 'Process Center', '<p>Database enrichment and debugging, including deduplication of records, updating data fields, standardization and enrichment of data and values. Digitalization and Database storage can be provided.<p>'])
-    
+  
     .row.justify-content-center.text-center.mt-5.mb-5
       each sr, index in serv
         a(href="#"+slugify(sr[0]) id="btn_"+slugify(sr[0]) ).col-6.col-md.servicio-item.smooth-scroll
           img(src="app/img/servicios/"+slugify(sr[0])+".png").img-circle
           p(data-l=sr[2])=sr[0]
-
-    .row.justify-content-center.text-center.mt-5.servicesdetails
-      each sr, index in serv
-        if index<4
-          .col-md-12( id=slugify(sr[0]) ).text-center.mainservicescontent
+  .text-center.mt-5.servicesdetails
+    each sr, index in serv
+      if index<4
+        div(id=slugify(sr[0]) ).text-center.mainservicescontent
+          .col-12: .container
             img(src="app/img/servicios/"+slugify(sr[0])+".png").img-circle
             h4.mt-3(data-l=sr[2])=sr[0]
             div.text-left(data-l=sr[3]) !{sr[1]}
             div.text-right
               a(href="#servicios").smooth-scroll: .fa.fa-chevron-up
-        else
+  .container
+    .row.justify-content-center.text-center.mt-5.servicesdetails
+      each sr, index in serv
+        if index>3
           .col-md-6.col-sm( id=slugify(sr[0]) ).text-center.mt-5
             img(src="app/img/servicios/"+slugify(sr[0])+".png").img-circle
             h4.mt-3(data-l=sr[2])=sr[0]
