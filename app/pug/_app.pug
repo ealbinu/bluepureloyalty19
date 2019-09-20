@@ -180,7 +180,7 @@ mixin scripts
       $('#unete .btn-group .btn').click(function(){
         
         var val = $(this).children('input').attr('val');
-        $('#unete a').attr('href', 'mailto:info@bluepureloyalty.com?subject='+val);
+        $('#unete a').attr('href', 'mailto:info@bluepureloyalty.com?subject=Estoy interesado en formar parte del área de '+val);
       });
 
 
@@ -363,31 +363,31 @@ mixin footer(inside)
   +modal('unete', '<span data-l="Join the Blue Team">Únete al Blue Team</span>')
     h4(data-l="Select an area") Selecciona un área
     .btn-group.btn-group-toggle(data-toggle="buttons")
-      label.btn.btn-primary.active
+      label.btn.btn-light.active
         input(type="radio" name="unete" checked val="Marketing")
         span(data-l="Marketing") Mercadotecnia
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="Tecnología")
         span(data-l="Technology") Tecnología
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="Contact Center")
         span Contact Center
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="Diseño y Comunicación")
         span(data-l="Design and Communication") Diseño y Comunicación
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="CRM and Business Intelligence")
         span CRM & Business Intelligence
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="Compras")
         span(data-l="Procurement") Compras
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="Fulfillment")
         span(data-l="Fulfillment") Fulfillment
-      label.btn.btn-primary.hide-us
+      label.btn.btn-light.hide-us
         input(type="radio" name="unete" val="Alianzas comerciales")
         span(data-l="Commercial Alliances") Alianzas comerciales
-      label.btn.btn-primary
+      label.btn.btn-light
         input(type="radio" name="unete" val="Otros")
         span(data-l="Other") Otros
     .text-center.mt-3.mb-3

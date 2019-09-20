@@ -561,6 +561,7 @@ nav.navbar.fixed-top.visible{
   color: var(--colGray);
   font-size: 0.9em;
   min-width: 220px;
+  max-width: 300px;
 }
 .servicio-item:hover{
   text-decoration: none;
@@ -960,7 +961,7 @@ header li.separator {
     margin: 2px 4px;
   }
   .btn-group .btn.active {
-    background: #061D41 !important;
+    /* background: #061D41 !important;*/
     
   }
   
@@ -1188,7 +1189,8 @@ header li.separator {
   left: 0;
   right: 0;
   width: 100%;
-  background: var(--colSec);
+  background: var(--colMain);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
   z-index: 1;
 }
 .cookies a{
@@ -1196,7 +1198,7 @@ header li.separator {
 }
 .cookies p{
   font-size: 0.9em;
-  color: #fff;
+  color: var(--colSec);
   margin: 10px;
 }
 .cookies .btn{

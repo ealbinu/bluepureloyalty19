@@ -389,31 +389,31 @@
         <div class="modal-body">
           <h4 data-l="Select an area">Selecciona un área</h4>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary active">
+            <label class="btn btn-light active">
               <input type="radio" name="unete" checked="checked" val="Marketing"/><span data-l="Marketing">Mercadotecnia</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="Tecnología"/><span data-l="Technology">Tecnología</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="Contact Center"/><span>Contact Center</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="Diseño y Comunicación"/><span data-l="Design and Communication">Diseño y Comunicación</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="CRM and Business Intelligence"/><span>CRM & Business Intelligence</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="Compras"/><span data-l="Procurement">Compras</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="Fulfillment"/><span data-l="Fulfillment">Fulfillment</span>
             </label>
-            <label class="btn btn-primary hide-us">
+            <label class="btn btn-light hide-us">
               <input type="radio" name="unete" val="Alianzas comerciales"/><span data-l="Commercial Alliances">Alianzas comerciales</span>
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-light">
               <input type="radio" name="unete" val="Otros"/><span data-l="Other">Otros</span>
             </label>
           </div>
@@ -611,7 +611,7 @@
       $('#unete .btn-group .btn').click(function(){
         
         var val = $(this).children('input').attr('val');
-        $('#unete a').attr('href', 'mailto:info@bluepureloyalty.com?subject='+val);
+        $('#unete a').attr('href', 'mailto:info@bluepureloyalty.com?subject=Estoy interesado en formar parte del área de '+val);
       });
     
     
